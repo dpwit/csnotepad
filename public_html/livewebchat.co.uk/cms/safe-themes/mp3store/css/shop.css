@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+			
+#shopCategories { width: 208px }
+#shopCategories h2 { width: 210px }
+#shop { width: 700px; padding: 10px; margin: 0 }
+#shop.noBorder { padding: 0; width: 720px }
+#shop.thinBorder { width: 698px; margin-top: 0 }
+#shop h2 { width: 700px; }
+#shop h2 a { text-decoration: none; color: #FFF }
+#shop h3 { margin-bottom: 5px }
+#shop ul { margin-bottom: 0 }
+#shop p { margin: 10px 0 }
+#shop form { }
+	#shop .form_main form {padding: 10px 0 0;}
+#shop table { width: 100% }
+
+.shop .last { }
+	.shop .last h2 {width: 700px;}
+	.shop .last .order a, .shop .download-link a {color: #000; text-decoration: underline;}
+		.shop .last .order a:hover, .shop .download-link a:hover {text-decoration: none;}
+.shop .download-link td {width: 230px;}
+.shop .download-link td + td {width: 80px;}
+
+.pagination {padding-top: 10px; clear:both;display:block;width:720px; position:relative;text-align:center}
+.pagination .NextPage {float: right; color: #fff; margin-right:0;}
+.pagination .PreviousPage {float: left; color: #fff; margin-left: 0}
+.pagination .pagenumbers a {color: #444; line-height: 23px; margin: 0 1px}
+.pagination .pagenumbers a.selected {font-weight: bold; color: #000;}
+.pagination .previouslink, .pagination .nextlink { margin: 0 auto; text-align:center; vertical-align:top; width: 200px; position:absolute }
+.pagination .previousLink { float: left;left:0 }
+.pagination .nextlink { float: right;right:0 }
+.pagination .pagenumbers {padding-bottom: 3px;}
+ul.cats { padding-bottom: 10px }
+ul.cats li { margin-top: 10px; margin-bottom: 0 }
+ul.cats li a { font-weight: bold; text-decoration: none; color: #444; display: block }
+ul.cats li a:hover { color: #000 }
+ul.subCat { margin-left: 12px }
+	ul.subCat li a { font-weight: normal }
+
+.col .product { float: left; width: 210px; margin: 10px 0 0; border: 1px solid #CCC; padding: 10px; height: 150px; }
+
+.col .product  + .product { margin-left: 12px}
+.col .product.last { margin-right: 0 }
+.product a.productImage { width: 115px; background: #DDD; margin-right: 6px; height: 115px; float: left; margin-bottom: 5px }
+.buttons { overflow: hidden }
+.buttons li { text-align: center; font-weight: bold; margin: 0 0 3px }
+.buttons li a, .buttons input[type=submit] { text-decoration: none; color: #222; border: 1px solid #AAA; display: block; text-transform: uppercase; font-size: 11px; padding: 5px; background: #EEE; margin-bottom: 5px; }
+.buttons li a:hover { border: 1px solid #888; background: #DDD }
+.buttons li a img {float: right;  }
+.product h3 { clear: left; font-size: 14px }
+	.product h3 a { text-decoration: none; color: #000 }
+		.product h3 a:hover {text-decoration: underline;}
+#productDetail { overflow: auto; margin-top: 10px; width: 720px }
+#pdContent { float: left; width: 458px; margin-right: 10px }
+	#pdContent h3 { font-size: 14px; margin-top: 15px }
+	#pdContent p { margin: 15px 0; font-size: 12px; line-height: 1.4 }
+#pdSidebar { float: left; width: 250px; border: 1px solid #CCC }
+	#pdSidebar h3 { padding: 5px; color: #FFF; background: #333; text-transform: uppercase; font-size: 11px; left: -1px; position: relative; width: 242px }
+	#pdSidebar h4 { padding: 5px; font-weight: bold; }
+	#pdSidebar .buttons { padding: 0 5px; margin: 0 }
+		#pdSidebar .buttons li { float: left; margin: 0; margin-right: 5px }
+			#pdSidebar .buttons li a { padding: 5px 5px 5px 8px }
+				#pdSidebar .buttons li a img { margin-left: 8px }
+	#pdSidebar .tracks { padding: 3px 5px 0; margin-bottom: 0 }
+		#pdSidebar .tracks li { margin: 2px 0; overflow: auto }
+			#pdSidebar .tracks li a { text-decoration: none; padding: 5px 0; display: block; color: #333 }
+				#pdSidebar .tracks li a:hover { color: #000 }
+			#pdSidebar .tracks li img { float: left; margin-right: 5px }
+				#pdSidebar .tracks a.add_to_basket { float: right; border: 1px solid #CCC; background: #EEE; font: 11px/16px Arial; font-weight: bold; color: #555; padding: 2px 4px }
+				#pdSidebar .tracks a.add_to_basket:hover { border-color: #AAA; background: #DDD }
+			#pdSidebar .tracks .add_to_basket img { float: right; margin: 0; margin-left: 5px }
+
+
+/*///// MIKES STUFF //////*/
+
+#contentRegister, #contentLogin, .formSection-Personal, .formSection-Billing, .userprofile form {width: 321px; display: block; float: left; margin: 0 } 
+	.formSection-Billing {float: right;}
+	.formSection-Personal {width: 321px;}
+	#contentLogin {float:right;}
+	.form_input input[type=text], .form_input input[type=password], .basket input[type=text], textarea, .formSection-Billing select {width: 200px;}
+	.formSection-Personal  input[type=text] {width: 195px;}
+	.formSection-Billing input[type=text], .formSection-Billing textarea {width: 195px;}
+		.formSection-Billing select {width: 201px;}
+		.form_notes, .form_error {margin-top: -5px; margin-right: 5px; margin-bottom: 5px; text-align: right;}
+		.form_notes {color: #444; font-size: 10px;}
+		.form_error { font-weight: bold; }	
+
+
+.form_input input[type=submit], .payment-navigation input[type=submit], .form_footer input[type=submit], .form_orders input[type=submit], .submitButton input[type=submit] { cursor: pointer }
+.form_input input[type=submit]:hover, .payment-navigation input[type=submit]:hover, .form_footer input[type=submit]:hover, .form_orders input[type=submit]:hover, .submitButton input[type=submit]:hover {background-position: 0 -23px }
+input[type=submit] + input[type=submit] { margin-left: 5px }
+
+.basket { margin-bottom: 15px; }
+	.basket thead tr {height: 20px;}	
+		.basket thead tr th  {font-weight: bold; color: #555; border-bottom: 1px solid #555;}
+		.basket tr { height: 40px; }
+		.basket td {vertical-align:middle; border-bottom: 1px solid #ccc;}	
+.basket .item , .basketItem {width: 350px; padding: 5px 0 }
+.basket .quantity, .basket .price, .basketQty, .basketPrice {width: 90px;}
+.basket input[type=text] {width: 20px;}
+.basket .totalCost {font-weight: bold;}
+.form_orders .formSection-Billing + .submitButton {clear:both; float: right;}
+
+.detailstd {width: 120px;}
+.form_footer a {color: #555; display: block; margin-top: 5px; float: left}
+	.form_footer a:hover {color: #000;}
+.formButtons { text-align: right; margin-top: 10px; overflow: hidden; margin-right: -5px }
+.form_footer a:hover {text-decoration: none;}
+#productTitle {font-size: 25px; margin-bottom: 10px;}
+#productArtists a { color: #000 }
+#categories a {color: #000;}
+	#categories a:hover, .basket a:hover {text-decoration: none;}
+	#categories ul ul {margin-left: 15px; list-style-type:disc;}
+
+.productThumbs { clear: both; overflow:hidden }
+.productThumb { float: left; margin-right: 3px }
+
+.basket-label { margin-top: 2px; display: block }
+	.basket-label a { color: #000 }
+.basket .item .buttons { width: 90px; margin-top: 5px; }
+	.basket .item .buttons li { margin: 0 }
+	.basket .item .buttons li a { margin-bottom: 0 }
+.basket-image { float: left; margin-right: 10px }
+
+.basketPrice,.checkoutPrice,.price { text-align: right }
+
+.errors { margin: 0 10px -10px }
+.errors p:first-child, .form_error, .error p {color: #C00; }
+.errors p:first-child, {margin-top: 0; font-size: 12px; font-weight: bold }
+
+.payment-method { padding-top: 10px; border-top: 1px solid #555; padding-bottom: 10px; border-bottom: 1px solid #555 }
+
+#shop.cardDetails {margin-top: 10px}
+	.cardDetails .form_main  {width: 326px;}
+	.cardDetails .form_input select {width: 206px;}
+	.cardDetails .card_expirymonth, .cardDetails .card_frommonth, .cardDetails .card_expiryyear, .cardDetails .card_fromyear {display: inline-block; padding-right: 5px;}
+		.cardDetails .card_expirymonth select, .cardDetails .card_frommonth select, .cardDetails .card_expiryyear select, .cardDetails .card_fromyear select {width: 100px;}
+	.cardDetails .coolButton {float: right;}
+	
+table.download-link a {color: #09F; text-decoration: underline; padding-left: 15px; background: url(/images/download.png) left center no-repeat;}
+	table.download-link a:hover {text-decoration: none;}
+	
+.DownloadSmallCol {text-align: center;}
+
+.formSection-Change .form_label {width: 145px;}
+
+.order a {color: #09F; text-decoration: none;}
+	.order a:hover {text-decoration: underline;}

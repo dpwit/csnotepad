@@ -1,0 +1,59 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+DirectoryIndex home.html index.php index.html
+RewriteCond %{HTTP_HOST} !.local$
+RewriteCond %{HTTP_HOST} !.localhost$
+RewriteCond %{HTTP_HOST} !.live$
+RewriteCond %{HTTP_HOST} !={$server_domain}
+RewriteCond %{HTTP_HOST} !={$server_download_domain}
+RewriteRule ^(.*)$ http://{$server_domain}/$1 [L,R=301]
+RewriteRule ^(cms/.*)$	$1 [L]
+
+#RewriteRule ^$ index.html [L]
+
+RewriteRule ^(cms/?)$	cms/index.php [L]
+RewriteRule ^(cms/.*)$	$1 [L]
+RewriteRule ^(ext/.*)$	$1 [L]
+RewriteRule ^(.*).xspf$ ext/modules/tracks/components/generateXSPF.php?file=$1.mp3 [L]
+RewriteRule ^(wav/.*)$	$1 [L]
+RewriteRule ^mp3/(.*)$	$1 [R=301,L]
+
+
+RewriteRule favicon.ico favicon.ico [L]
+
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-f
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-d
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-l
+RewriteCond    %{DOCUMENT_ROOT}/html/%{REQUEST_URI} -f
+RewriteRule	^(.*)$	html/$1	 [L]
+
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-f
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-d
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-l
+RewriteCond    %{DOCUMENT_ROOT}/themes/mp3store/%{REQUEST_URI} -f
+RewriteRule	^(.*)$	themes/mp3store/$1	 [L]
+
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-f
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-d
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-l
+RewriteCond    %{DOCUMENT_ROOT}/themes/default/%{REQUEST_URI} -f
+RewriteRule	^(.*)$	themes/default/$1	 [L]
+
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} -f
+RewriteRule ^(.*)$	$1 [L]
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO}.php -f
+RewriteRule ^(.*)$	$1.php [L]
+
+
+RewriteCond    %{SCRIPT_FILENAME} !^index.html
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-f
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-d
+RewriteCond    %{SCRIPT_FILENAME}%{PATH_INFO} !-l
+RewriteRule    .* index.php
+RewriteRule    ^$ index.php
+
+</IfModule>
+
+Options -Indexes
+

@@ -1,0 +1,39 @@
+
+
+Dear <?=$this->customer_title?> <?=$this->customer_lastname?>
+
+
+PLEASE READ CAREFULLY
+
+
+<?
+$event = $this->event();
+$venue = $this->venue();
+$ticket = $this->ticket();
+
+?>
+
+you have booked <?=$this->quantity?> tickets to <?=$title?> at <?=$venue->title?>, <?=str_replace("\n",",",$venue->address)?> on <?=$date?> at <?=$event->startTime?>
+
+
+YOUR REFERENCE NUMBER IS:
+<?=$this->order_ref ?>
+
+
+<?=$this->collectionInstructions()?>
+
+<?=$event->disclaimers?>
+
+
+You have been charged the total sum of <?=$this->getPrice(false)?>
+Plus a booking fee of <?=$this->getBookingFee()?>
+
+
+Please print off a copy of this confirmation and do not delete as you will need this reference number on the night of the show, you may be refused entry without this.
+
+For any enquiries prior to the event please call the C2 box office on 01273 673311
+
+See you soon @ <?=$venue->title?>!
+www.concorde2.co.uk  
+
+

@@ -1,0 +1,71 @@
+><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Elite Promo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<?= join("\n",$this->getHeaders()) ?>
+		<base href='http://<?=$_SERVER['HTTP_HOST']?>/'/>
+		<script src="includes/js/jquery.corner.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		  $(document).ready(function(){
+		  	$(".toprounded").corner("top 10px cc:#B5B5B5");
+	//	  	$(".bottomrounded").corner("bottom 10px cc:#B5B5B5");
+	//		$(".genreitem").corner("br bevel 7px");
+	//	  	$(".menuitem").corner("top 8px");
+		  });
+		</script>
+		<script src="includes/js/cufon-yui.js" type="text/javascript"></script>
+		<script src="includes/js/Typ1451-AlternateMedium_400.font.js" type="text/javascript"></script>
+		<script src="includes/js/Typ1451-Bold_400.font.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		Cufon('h2');
+		Cufon('h3');
+			Cufon.replace('h2', { fontFamily: 'Typ1451-AlternativeMedium' })
+			Cufon.replace('h3', { fontFamily: 'Typ1451-Bold' })
+		</script>
+		<link href="includes/css/blueprint/src/reset.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="/css/boxy.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+<div class="toprounded">
+<div id="login">
+	<?$this->renderComponent('login',array('skipWrap'=>true))?>
+<!--<form name="loginForm" id="loginform" action="">login<input type="text" id="loginbox" /><input
+	type="password" id="passwordbox" /><input type="submit" id="loginSubmit"
+	value="" />
+<div id="loginoptions"><a href="register">register</a>&nbsp;|&nbsp;<a
+	href="">forgotten password?</a></div></form>-->
+
+</div> <!-- end login  -->
+</div>
+<div class="wrapper">
+<div class="header">
+<div id="logo"><a href='/'><img src="images/logo.png" alt="elitepromo.dj" /></a></div>
+<div id="menu">
+	<?$this->renderComponent('top',array('skipWrap'=>true))?>
+</div> <!-- end menu -->
+<div id="searchleft"> </div>
+<div id='search'><?=$this->renderComponent('search',array('skipWrap'=>true))?></div>
+<div id="searchright"> </div>
+</div> <!-- end header  --><div class="left1">
+<?$this->renderComponent('left')?>
+</div> <!-- end left1  -->
+<div class="maincontent">
+<?$this->renderComponent('main')?>
+</div> <!-- end maincontent  -->
+
+<div class="right">
+<?$this->renderComponent('right')?>
+</div> <!-- end right  -->
+<div id="footer">
+<div class="floatleft">&copy; 2010 Elite Promo. All Rights reserved. Site by <a href="http://www.bozboz.co.uk">BozBoz</a></div>
+<div class="floatright">Login | Sign up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home | Labels | Genres | FAQ | Contact</div>
+            </div> <!-- end footer -->
+        <script type="text/javascript"> Cufon.now(); </script>
+                <br class="clearall" />
+        </div> <!--  end wrapper -->
+
+	</body>
+</html>

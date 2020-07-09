@@ -1,0 +1,2389 @@
+ERROR - OneOffOrder Object
+(
+    [adminEmail] => hello@concorde2.co.uk
+    [new_items] => Array
+        (
+        )
+
+    [errors] => Array
+        (
+            [processing] => Sage Pay Response: NOTAUTHED 2000 : The Authorisation was Declined by the bank.
+        )
+
+    [queued] => Array
+        (
+        )
+
+    [queueing] => 
+    [engine] => MySQLEngine Object
+        (
+        )
+
+    [explicitFields] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+            [order_items] => Array
+                (
+                    [field] => uid
+                    [table] => order_items
+                    [ref_field] => order_uid
+                    [composition] => 
+                    [model] => Order_Item
+                    [manager] => ManyManager Object
+                        (
+                            [name] => order_items
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => order_items
+                                    [ref_field] => order_uid
+                                    [composition] => 
+                                    [model] => Order_Item
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Order Items
+                                    [label] => Order Items
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order Items
+                    [label] => Order Items
+                    [loaded] => 1
+                )
+
+            [order_state] => Array
+                (
+                    [field] => order_state_uid
+                    [table] => order_states
+                    [ref_field] => uid
+                    [model] => OrderState
+                    [composition] => 
+                    [add-filter] => 1
+                    [default-filter] => complete
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order State
+                    [label] => Order State
+                    [loaded] => 1
+                )
+
+            [user] => Array
+                (
+                    [field] => user_uid
+                    [table] => user
+                    [ref_field] => id
+                    [model] => User
+                    [composition] => 
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => User
+                    [label] => User
+                    [loaded] => 1
+                )
+
+            [notes] => Array
+                (
+                    [field] => uid
+                    [table] => notes
+                    [ref_field] => ref_id
+                    [composition] => 
+                    [model] => OrderNote
+                    [manager] => ManyManager Object
+                        (
+                            [name] => notes
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => notes
+                                    [ref_field] => ref_id
+                                    [composition] => 
+                                    [model] => OrderNote
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [show-count] => 1
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Notes
+                                    [label] => Notes
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [show-count] => 1
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Notes
+                    [label] => Notes
+                    [loaded] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [history] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => HistoryHooks Object
+                                (
+                                )
+
+                            [1] => get_history
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresshipping] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => requiresShipping
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [gettotalweight] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => getTotalWeight
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresvat] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => VATHooks Object
+                                (
+                                )
+
+                            [1] => requiresVAT
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [labelField] => name
+    [slugField] => 
+    [uid] => 5861
+    [spaceCharacter] => -
+    [destroyed] => 
+    [compositionReady] => 1
+    [preparedComposition] => Array
+        (
+        )
+
+    [exportsSchema] => 
+    [autoRender] => 1
+    [autoView] => index
+    [viewData] => Array
+        (
+        )
+
+    [modelName] => OneOffOrder
+    [modelNames] => Array
+        (
+            [0] => oneofforder
+        )
+
+    [debug] => 
+    [origObj] => stdClass Object
+        (
+            [uid] => 5861
+            [total] => 0.00
+            [customer_email] => bower.bozboz@gmail.com
+            [customer_title] => Mr
+            [customer_firstname] => Dan
+            [customer_middlename] => 
+            [customer_lastname] => Bower
+            [customer_address] => 4 corner green
+            [customer_city] => ringmer
+            [customer_country] => GB
+            [customer_postcode] => bn85ps
+            [customer_state] => east sussex
+            [customer_phone] => 01273813522
+            [customer_mobile] => 
+            [card_title] => Mr
+            [card_firstname] => Dan
+            [card_middlename] => 
+            [card_lastname] => Bower
+            [card_address] => 4 corner green
+            [card_city] => ringmer
+            [card_country] => GB
+            [card_postcode] => bn85ps
+            [card_state] => east sussex
+            [ctime] => 1351509471
+            [mtime] => 1351509591
+            [order_state_uid] => 2
+            [ip] => 93.97.187.118
+            [total_processed] => 
+            [payment_gateway] => sagepay/direct
+            [payment_method] => card
+            [payment_version] => 
+            [payment_data] => {"VPSProtocol":"2.23","Status":"NOTAUTHED","StatusDetail":"2000 : The Authorisation was Declined by the bank.","VPSTxId":"{98C5BBE6-45F6-CFFB-C60A-9BB7C04D2AE3}","SecurityKey":"WRIDFWSR8Y","AVSCV2":"DATA NOT CHECKED","AddressResult":"NOTPROVIDED","PostCodeResult":"NOTPROVIDED","CV2Result":"NOTPROVIDED","3DSecureStatus":"NOTCHECKED","VendorTxCode":"csnotepad-5861-1192235"}
+            [payment_id1] => 
+            [payment_id2] => 
+            [payment_environment] => live.sagepay.com
+            [payment_message] => 2000 : The Authorisation was Declined by the bank.
+            [payment_status] => NOTAUTHED
+            [payment_type] => oneoff
+            [subscription_uid] => 
+            [user_uid] => 
+            [company_position] => Web dev
+            [refered_from] => friend
+            [company_name] => bozboz
+            [company_activity] => digital agency
+            [company_phone] => 01273727581
+            [company_address] => 1 church road
+            [prefered_contact] => Email
+        )
+
+    [total] => 0.00
+    [customer_email] => bower.bozboz@gmail.com
+    [customer_title] => Mr
+    [customer_firstname] => Dan
+    [customer_middlename] => 
+    [customer_lastname] => Bower
+    [customer_address] => 4 corner green
+    [customer_city] => ringmer
+    [customer_country] => GB
+    [customer_postcode] => bn85ps
+    [customer_state] => east sussex
+    [customer_phone] => 01273813522
+    [customer_mobile] => 
+    [card_title] => Mr
+    [card_firstname] => Dan
+    [card_middlename] => 
+    [card_lastname] => Bower
+    [card_address] => 4 corner green
+    [card_city] => ringmer
+    [card_country] => GB
+    [card_postcode] => bn85ps
+    [card_state] => east sussex
+    [ctime] => 1351509471
+    [mtime] => 1351509591
+    [order_state_uid] => 2
+    [ip] => 93.97.187.118
+    [total_processed] => 
+    [payment_gateway] => sagepay/direct
+    [payment_method] => card
+    [payment_version] => 
+    [payment_data] => Array
+        (
+            [VPSProtocol] => 2.23
+            [Status] => NOTAUTHED
+            [StatusDetail] => 2000 : The Authorisation was Declined by the bank.
+            [VPSTxId] => {98C5BBE6-45F6-CFFB-C60A-9BB7C04D2AE3}
+            [SecurityKey] => WRIDFWSR8Y
+            [AVSCV2] => DATA NOT CHECKED
+            [AddressResult] => NOTPROVIDED
+            [PostCodeResult] => NOTPROVIDED
+            [CV2Result] => NOTPROVIDED
+            [3DSecureStatus] => NOTCHECKED
+            [VendorTxCode] => csnotepad-5861-1192235
+        )
+
+    [payment_id1] => 
+    [payment_id2] => 
+    [payment_environment] => live.sagepay.com
+    [payment_message] => 2000 : The Authorisation was Declined by the bank.
+    [payment_status] => NOTAUTHED
+    [payment_type] => oneoff
+    [subscription_uid] => 
+    [user_uid] => 
+    [company_position] => Web dev
+    [refered_from] => friend
+    [company_name] => bozboz
+    [company_activity] => digital agency
+    [company_phone] => 01273727581
+    [company_address] => 1 church road
+    [prefered_contact] => Email
+    [table] => order
+    [params] => Array
+        (
+        )
+
+    [gateway] => SagePayGateway Object
+        (
+            [vendor] => csnotepad
+            [live] => 1
+        )
+
+    [Order_Item] => Order_Item Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [order] => Array
+                        (
+                            [field] => order_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => GenericOrder
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                    [user] => Array
+                        (
+                            [type] => 4
+                            [composition] => 
+                            [through] => order
+                            [manager] => ThroughManager Object
+                                (
+                                    [instance] => Order_Item Object
+ *RECURSION*
+                                    [name] => user
+                                    [rel] => Array
+                                        (
+                                            [type] => 4
+                                            [composition] => 
+                                            [through] => order
+                                            [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ThroughManager.php:ThroughManager
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [product] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => product_for_item
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => Order_Item
+            [modelNames] => Array
+                (
+                    [0] => order_item
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_item
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 3
+            [lastGet] => 
+        )
+
+    [OrderState] => OrderState Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderState
+            [modelNames] => Array
+                (
+                    [0] => orderstate
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_state
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 1
+            [lastGet] => 
+        )
+
+    [User] => FEUser Object
+        (
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [usergroup] => Array
+                        (
+                            [field] => usergroup_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => Usergroup
+                            [composition] => 
+                            [add-filter] => 1
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [downloads] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => downloads_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [orders] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => orders_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [notes] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => notes_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [extraTable] => 
+            [modelName] => FEUser
+            [modelNames] => Array
+                (
+                    [0] => feuser
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => user
+            [params] => Array
+                (
+                )
+
+        )
+
+    [OrderNote] => OrderNote Object
+        (
+            [fixed_table] => orders
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [author] => Array
+                        (
+                            [field] => author_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => User
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderNote
+            [modelNames] => Array
+                (
+                    [0] => ordernote
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => note
+            [params] => Array
+                (
+                )
+
+            [ref_table] => orders
+            [ref_id] => 
+        )
+
+    [order_items] => 
+    [order_state] => 
+    [user] => 
+    [notes] => 
+    [card_type] => Visa
+    [card_name] => Mr F Bar
+    [card_number] => 0
+    [card_frommonth] => 
+    [card_fromyear] => 
+    [card_from] => /
+    [card_expirymonth] => 1
+    [card_expiryyear] => 1970
+    [card_expiry] => 1/1970
+    [issue_number] => 0
+    [card_cvv] => 0
+    [crypt] => mycrypt Object
+        (
+            [key] => yeirgzawcdhbqokuxnjstfplvm
+        )
+
+    [status_detail] => 
+    [card_start] => 
+    [card_issue_number] => 
+    [payment_engine] => sagepay/direct
+)
+
+ERROR - OneOffOrder Object
+(
+    [adminEmail] => hello@concorde2.co.uk
+    [new_items] => Array
+        (
+        )
+
+    [errors] => Array
+        (
+            [processing] => Sage Pay Response: NOTAUTHED 2000 : The Authorisation was Declined by the bank.
+        )
+
+    [queued] => Array
+        (
+        )
+
+    [queueing] => 
+    [engine] => MySQLEngine Object
+        (
+        )
+
+    [explicitFields] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+            [order_items] => Array
+                (
+                    [field] => uid
+                    [table] => order_items
+                    [ref_field] => order_uid
+                    [composition] => 
+                    [model] => Order_Item
+                    [manager] => ManyManager Object
+                        (
+                            [name] => order_items
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => order_items
+                                    [ref_field] => order_uid
+                                    [composition] => 
+                                    [model] => Order_Item
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Order Items
+                                    [label] => Order Items
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order Items
+                    [label] => Order Items
+                    [loaded] => 1
+                )
+
+            [order_state] => Array
+                (
+                    [field] => order_state_uid
+                    [table] => order_states
+                    [ref_field] => uid
+                    [model] => OrderState
+                    [composition] => 
+                    [add-filter] => 1
+                    [default-filter] => complete
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order State
+                    [label] => Order State
+                    [loaded] => 1
+                )
+
+            [user] => Array
+                (
+                    [field] => user_uid
+                    [table] => user
+                    [ref_field] => id
+                    [model] => User
+                    [composition] => 
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => User
+                    [label] => User
+                    [loaded] => 1
+                )
+
+            [notes] => Array
+                (
+                    [field] => uid
+                    [table] => notes
+                    [ref_field] => ref_id
+                    [composition] => 
+                    [model] => OrderNote
+                    [manager] => ManyManager Object
+                        (
+                            [name] => notes
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => notes
+                                    [ref_field] => ref_id
+                                    [composition] => 
+                                    [model] => OrderNote
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [show-count] => 1
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Notes
+                                    [label] => Notes
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [show-count] => 1
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Notes
+                    [label] => Notes
+                    [loaded] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [history] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => HistoryHooks Object
+                                (
+                                )
+
+                            [1] => get_history
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresshipping] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => requiresShipping
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [gettotalweight] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => getTotalWeight
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresvat] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => VATHooks Object
+                                (
+                                )
+
+                            [1] => requiresVAT
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [labelField] => name
+    [slugField] => 
+    [uid] => 5927
+    [spaceCharacter] => -
+    [destroyed] => 
+    [compositionReady] => 1
+    [preparedComposition] => Array
+        (
+        )
+
+    [exportsSchema] => 
+    [autoRender] => 1
+    [autoView] => index
+    [viewData] => Array
+        (
+        )
+
+    [modelName] => OneOffOrder
+    [modelNames] => Array
+        (
+            [0] => oneofforder
+        )
+
+    [debug] => 
+    [origObj] => stdClass Object
+        (
+            [uid] => 5927
+            [total] => 0.00
+            [customer_email] => adrian.alexa@mail.com
+            [customer_title] => Mr
+            [customer_firstname] => Adrian
+            [customer_middlename] => 
+            [customer_lastname] => Alexa
+            [customer_address] => 1 Dean Road
+            [customer_city] => London
+            [customer_country] => GB
+            [customer_postcode] => NW2 5AB
+            [customer_state] => 
+            [customer_phone] => 07451412302
+            [customer_mobile] => 
+            [card_title] => Mr
+            [card_firstname] => Adrian
+            [card_middlename] => 
+            [card_lastname] => Alexa
+            [card_address] => 1 Dean Road
+            [card_city] => London
+            [card_country] => GB
+            [card_postcode] => NW2 5AB
+            [card_state] => 
+            [ctime] => 1352217966
+            [mtime] => 1352218948
+            [order_state_uid] => 2
+            [ip] => 31.127.41.186
+            [total_processed] => 
+            [payment_gateway] => sagepay/direct
+            [payment_method] => card
+            [payment_version] => 
+            [payment_data] => {"VPSProtocol":"2.23","Status":"NOTAUTHED","StatusDetail":"2000 : The Authorisation was Declined by the bank.","VPSTxId":"{C4DC9E59-7382-AE63-9D98-8F2A2D2DBABD}","SecurityKey":"KRLMKQWLFW","AVSCV2":"DATA NOT CHECKED","AddressResult":"NOTPROVIDED","PostCodeResult":"NOTPROVIDED","CV2Result":"NOTPROVIDED","3DSecureStatus":"NOTCHECKED","VendorTxCode":"csnotepad-5927-451614857"}
+            [payment_id1] => 
+            [payment_id2] => 
+            [payment_environment] => live.sagepay.com
+            [payment_message] => 2000 : The Authorisation was Declined by the bank.
+            [payment_status] => NOTAUTHED
+            [payment_type] => oneoff
+            [subscription_uid] => 
+            [user_uid] => 
+            [company_position] => owner
+            [refered_from] => internet
+            [company_name] => AVA Accountants
+            [company_activity] => advisory services
+            [company_phone] => 07451412302
+            [company_address] => 182 Gloucester Place
+London, NW1 6DS
+            [prefered_contact] => Phone
+        )
+
+    [total] => 0.00
+    [customer_email] => adrian.alexa@mail.com
+    [customer_title] => Mr
+    [customer_firstname] => Adrian
+    [customer_middlename] => 
+    [customer_lastname] => Alexa
+    [customer_address] => 1 Dean Road
+    [customer_city] => London
+    [customer_country] => GB
+    [customer_postcode] => NW2 5AB
+    [customer_state] => 
+    [customer_phone] => 07451412302
+    [customer_mobile] => 
+    [card_title] => Mr
+    [card_firstname] => Adrian
+    [card_middlename] => 
+    [card_lastname] => Alexa
+    [card_address] => 1 Dean Road
+    [card_city] => London
+    [card_country] => GB
+    [card_postcode] => NW2 5AB
+    [card_state] => 
+    [ctime] => 1352217966
+    [mtime] => 1352218948
+    [order_state_uid] => 2
+    [ip] => 31.127.41.186
+    [total_processed] => 
+    [payment_gateway] => sagepay/direct
+    [payment_method] => card
+    [payment_version] => 
+    [payment_data] => Array
+        (
+            [VPSProtocol] => 2.23
+            [Status] => NOTAUTHED
+            [StatusDetail] => 2000 : The Authorisation was Declined by the bank.
+            [VPSTxId] => {C4DC9E59-7382-AE63-9D98-8F2A2D2DBABD}
+            [SecurityKey] => KRLMKQWLFW
+            [AVSCV2] => DATA NOT CHECKED
+            [AddressResult] => NOTPROVIDED
+            [PostCodeResult] => NOTPROVIDED
+            [CV2Result] => NOTPROVIDED
+            [3DSecureStatus] => NOTCHECKED
+            [VendorTxCode] => csnotepad-5927-451614857
+        )
+
+    [payment_id1] => 
+    [payment_id2] => 
+    [payment_environment] => live.sagepay.com
+    [payment_message] => 2000 : The Authorisation was Declined by the bank.
+    [payment_status] => NOTAUTHED
+    [payment_type] => oneoff
+    [subscription_uid] => 
+    [user_uid] => 
+    [company_position] => owner
+    [refered_from] => internet
+    [company_name] => AVA Accountants
+    [company_activity] => advisory services
+    [company_phone] => 07451412302
+    [company_address] => 182 Gloucester Place
+London, NW1 6DS
+    [prefered_contact] => Phone
+    [table] => order
+    [params] => Array
+        (
+        )
+
+    [gateway] => SagePayGateway Object
+        (
+            [vendor] => csnotepad
+            [live] => 1
+        )
+
+    [Order_Item] => Order_Item Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [order] => Array
+                        (
+                            [field] => order_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => GenericOrder
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                    [user] => Array
+                        (
+                            [type] => 4
+                            [composition] => 
+                            [through] => order
+                            [manager] => ThroughManager Object
+                                (
+                                    [instance] => Order_Item Object
+ *RECURSION*
+                                    [name] => user
+                                    [rel] => Array
+                                        (
+                                            [type] => 4
+                                            [composition] => 
+                                            [through] => order
+                                            [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ThroughManager.php:ThroughManager
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [product] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => product_for_item
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => Order_Item
+            [modelNames] => Array
+                (
+                    [0] => order_item
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_item
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 4
+            [lastGet] => 
+        )
+
+    [OrderState] => OrderState Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderState
+            [modelNames] => Array
+                (
+                    [0] => orderstate
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_state
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 1
+            [lastGet] => 
+        )
+
+    [User] => FEUser Object
+        (
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [usergroup] => Array
+                        (
+                            [field] => usergroup_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => Usergroup
+                            [composition] => 
+                            [add-filter] => 1
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [downloads] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => downloads_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [orders] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => orders_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [notes] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => notes_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [extraTable] => 
+            [modelName] => FEUser
+            [modelNames] => Array
+                (
+                    [0] => feuser
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => user
+            [params] => Array
+                (
+                )
+
+        )
+
+    [OrderNote] => OrderNote Object
+        (
+            [fixed_table] => orders
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [author] => Array
+                        (
+                            [field] => author_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => User
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderNote
+            [modelNames] => Array
+                (
+                    [0] => ordernote
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => note
+            [params] => Array
+                (
+                )
+
+            [ref_table] => orders
+            [ref_id] => 
+        )
+
+    [order_items] => 
+    [order_state] => 
+    [user] => 
+    [notes] => 
+    [card_type] => Visa
+    [card_name] => adrian alexa
+    [card_number] => 0
+    [card_frommonth] => 11
+    [card_fromyear] => 2011
+    [card_from] => 11/2011
+    [card_expirymonth] => 1
+    [card_expiryyear] => 1970
+    [card_expiry] => 1/1970
+    [issue_number] => 0
+    [card_cvv] => 0
+    [crypt] => mycrypt Object
+        (
+            [key] => vbdwrhjazqsemlcfikygpxontu
+        )
+
+    [status_detail] => 
+    [card_start] => 
+    [card_issue_number] => 
+    [payment_engine] => sagepay/direct
+)
+
+ERROR - OneOffOrder Object
+(
+    [adminEmail] => hello@concorde2.co.uk
+    [new_items] => Array
+        (
+        )
+
+    [errors] => Array
+        (
+            [processing] => Sage Pay Response: INVALID 5011 : Your card number has failed our validity checks and appears to be incorrect.  Please check and re-enter.
+        )
+
+    [queued] => Array
+        (
+        )
+
+    [queueing] => 
+    [engine] => MySQLEngine Object
+        (
+        )
+
+    [explicitFields] => Array
+        (
+        )
+
+    [relationships] => Array
+        (
+            [order_items] => Array
+                (
+                    [field] => uid
+                    [table] => order_items
+                    [ref_field] => order_uid
+                    [composition] => 
+                    [model] => Order_Item
+                    [manager] => ManyManager Object
+                        (
+                            [name] => order_items
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => order_items
+                                    [ref_field] => order_uid
+                                    [composition] => 
+                                    [model] => Order_Item
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Order Items
+                                    [label] => Order Items
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order Items
+                    [label] => Order Items
+                    [loaded] => 1
+                )
+
+            [order_state] => Array
+                (
+                    [field] => order_state_uid
+                    [table] => order_states
+                    [ref_field] => uid
+                    [model] => OrderState
+                    [composition] => 
+                    [add-filter] => 1
+                    [default-filter] => complete
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Order State
+                    [label] => Order State
+                    [loaded] => 1
+                )
+
+            [user] => Array
+                (
+                    [field] => user_uid
+                    [table] => user
+                    [ref_field] => id
+                    [model] => User
+                    [composition] => 
+                    [type] => 1
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => User
+                    [label] => User
+                    [loaded] => 1
+                )
+
+            [notes] => Array
+                (
+                    [field] => uid
+                    [table] => notes
+                    [ref_field] => ref_id
+                    [composition] => 
+                    [model] => OrderNote
+                    [manager] => ManyManager Object
+                        (
+                            [name] => notes
+                            [params] => Array
+                                (
+                                    [field] => uid
+                                    [table] => notes
+                                    [ref_field] => ref_id
+                                    [composition] => 
+                                    [model] => OrderNote
+                                    [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ManyManager.php:ManyManager
+                                    [show-count] => 1
+                                    [type] => 2
+                                    [additionalWhere] => Array
+                                        (
+                                        )
+
+                                    [name] => Notes
+                                    [label] => Notes
+                                )
+
+                            [instance] => OneOffOrder Object
+ *RECURSION*
+                        )
+
+                    [show-count] => 1
+                    [type] => 2
+                    [additionalWhere] => Array
+                        (
+                        )
+
+                    [name] => Notes
+                    [label] => Notes
+                    [loaded] => 1
+                )
+
+        )
+
+    [custom] => Array
+        (
+            [history] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => HistoryHooks Object
+                                (
+                                )
+
+                            [1] => get_history
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresshipping] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => requiresShipping
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [gettotalweight] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => ShippingHooks Object
+                                (
+                                )
+
+                            [1] => getTotalWeight
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [requiresvat] => Array
+                (
+                    [fn] => Array
+                        (
+                            [0] => VATHooks Object
+                                (
+                                )
+
+                            [1] => requiresVAT
+                        )
+
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [labelField] => name
+    [slugField] => 
+    [uid] => 9896
+    [spaceCharacter] => -
+    [destroyed] => 
+    [compositionReady] => 1
+    [preparedComposition] => Array
+        (
+        )
+
+    [exportsSchema] => 
+    [autoRender] => 1
+    [autoView] => index
+    [viewData] => Array
+        (
+        )
+
+    [modelName] => OneOffOrder
+    [modelNames] => Array
+        (
+            [0] => oneofforder
+        )
+
+    [debug] => 
+    [origObj] => stdClass Object
+        (
+            [uid] => 9896
+            [total] => 0.00
+            [customer_email] => melodyakena@gmail.com
+            [customer_title] => Miss
+            [customer_firstname] => Melody
+            [customer_middlename] => 
+            [customer_lastname] => Akena
+            [customer_address] => 17 Albion Street
+            [customer_city] => Brighton 
+            [customer_country] => GB
+            [customer_postcode] => BN29NE
+            [customer_state] => East Sussex
+            [customer_phone] => 07849534532
+            [customer_mobile] => 
+            [card_title] => Miss
+            [card_firstname] => Melody
+            [card_middlename] => 
+            [card_lastname] => Akena
+            [card_address] => 17 Albion Street
+            [card_city] => Brighton 
+            [card_country] => GB
+            [card_postcode] => BN29NE
+            [card_state] => East Sussex
+            [ctime] => 1384632642
+            [mtime] => 1384633204
+            [order_state_uid] => 2
+            [ip] => 176.251.63.128
+            [total_processed] => 
+            [payment_gateway] => sagepay/direct
+            [payment_method] => card
+            [payment_version] => 
+            [payment_data] => {"VPSProtocol":"2.23","Status":"INVALID","StatusDetail":"5011 : Your card number has failed our validity checks and appears to be incorrect.  Please check and re-enter.","VendorTxCode":"csnotepad-9896-66287008"}
+            [payment_id1] => 
+            [payment_id2] => 
+            [payment_environment] => live.sagepay.com
+            [payment_message] => 5011 : Your card number has failed our validity checks and appears to be incorrect.  Please check and re-enter.
+            [payment_status] => INVALID
+            [payment_type] => oneoff
+            [subscription_uid] => 
+            [user_uid] => 
+            [company_position] => Owner 
+            [refered_from] => Online search 
+            [company_name] => Elevate Coaching Ltd 
+            [company_activity] => Coaching business
+            [company_phone] => 07849534532
+            [company_address] => Clara house
+Front Street 
+Sacriston 
+DH76AF
+            [prefered_contact] => Phone
+        )
+
+    [total] => 0.00
+    [customer_email] => melodyakena@gmail.com
+    [customer_title] => Miss
+    [customer_firstname] => Melody
+    [customer_middlename] => 
+    [customer_lastname] => Akena
+    [customer_address] => 17 Albion Street
+    [customer_city] => Brighton 
+    [customer_country] => GB
+    [customer_postcode] => BN29NE
+    [customer_state] => East Sussex
+    [customer_phone] => 07849534532
+    [customer_mobile] => 
+    [card_title] => Miss
+    [card_firstname] => Melody
+    [card_middlename] => 
+    [card_lastname] => Akena
+    [card_address] => 17 Albion Street
+    [card_city] => Brighton 
+    [card_country] => GB
+    [card_postcode] => BN29NE
+    [card_state] => East Sussex
+    [ctime] => 1384632642
+    [mtime] => 1384633204
+    [order_state_uid] => 2
+    [ip] => 176.251.63.128
+    [total_processed] => 
+    [payment_gateway] => sagepay/direct
+    [payment_method] => card
+    [payment_version] => 
+    [payment_data] => Array
+        (
+            [VPSProtocol] => 2.23
+            [Status] => INVALID
+            [StatusDetail] => 5011 : Your card number has failed our validity checks and appears to be incorrect.  Please check and re-enter.
+            [VendorTxCode] => csnotepad-9896-66287008
+        )
+
+    [payment_id1] => 
+    [payment_id2] => 
+    [payment_environment] => live.sagepay.com
+    [payment_message] => 5011 : Your card number has failed our validity checks and appears to be incorrect.  Please check and re-enter.
+    [payment_status] => INVALID
+    [payment_type] => oneoff
+    [subscription_uid] => 
+    [user_uid] => 
+    [company_position] => Owner 
+    [refered_from] => Online search 
+    [company_name] => Elevate Coaching Ltd 
+    [company_activity] => Coaching business
+    [company_phone] => 07849534532
+    [company_address] => Clara house
+Front Street 
+Sacriston 
+DH76AF
+    [prefered_contact] => Phone
+    [table] => order
+    [params] => Array
+        (
+        )
+
+    [gateway] => SagePayGateway Object
+        (
+            [vendor] => csnotepad
+            [live] => 1
+        )
+
+    [Order_Item] => Order_Item Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [order] => Array
+                        (
+                            [field] => order_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => GenericOrder
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                    [user] => Array
+                        (
+                            [type] => 4
+                            [composition] => 
+                            [through] => order
+                            [manager] => ThroughManager Object
+                                (
+                                    [instance] => Order_Item Object
+ *RECURSION*
+                                    [name] => user
+                                    [rel] => Array
+                                        (
+                                            [type] => 4
+                                            [composition] => 
+                                            [through] => order
+                                            [manager] => /home/csnotepa/public_html/cms/includes/models/relationships/ThroughManager.php:ThroughManager
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [product] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => product_for_item
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => Order_Item
+            [modelNames] => Array
+                (
+                    [0] => order_item
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_item
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 4
+            [lastGet] => 
+        )
+
+    [OrderState] => OrderState Object
+        (
+            [engine] => MySQLEngine Object
+                (
+                )
+
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderState
+            [modelNames] => Array
+                (
+                    [0] => orderstate
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => order_state
+            [params] => Array
+                (
+                )
+
+            [included] => Array
+                (
+                )
+
+            [lastCount] => 1
+            [lastGet] => 
+        )
+
+    [User] => FEUser Object
+        (
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [usergroup] => Array
+                        (
+                            [field] => usergroup_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => Usergroup
+                            [composition] => 
+                            [add-filter] => 1
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [downloads] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => ProductHooks Object
+                                        (
+                                        )
+
+                                    [1] => downloads_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [orders] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => orders_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                    [notes] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => OrderHooks Object
+                                        (
+                                        )
+
+                                    [1] => notes_for_user
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [extraTable] => 
+            [modelName] => FEUser
+            [modelNames] => Array
+                (
+                    [0] => feuser
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => user
+            [params] => Array
+                (
+                )
+
+        )
+
+    [OrderNote] => OrderNote Object
+        (
+            [fixed_table] => orders
+            [engine] => 
+            [fields] => 
+            [explicitFields] => Array
+                (
+                )
+
+            [relationships] => Array
+                (
+                    [author] => Array
+                        (
+                            [field] => author_uid
+                            [table] => 
+                            [ref_field] => 
+                            [model] => User
+                            [composition] => 
+                            [type] => 1
+                        )
+
+                )
+
+            [custom] => Array
+                (
+                    [history] => Array
+                        (
+                            [fn] => Array
+                                (
+                                    [0] => HistoryHooks Object
+                                        (
+                                        )
+
+                                    [1] => get_history
+                                )
+
+                            [args] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [labelField] => name
+            [slugField] => 
+            [uid] => 
+            [spaceCharacter] => -
+            [destroyed] => 
+            [compositionReady] => 
+            [preparedComposition] => Array
+                (
+                )
+
+            [exportsSchema] => 
+            [autoRender] => 1
+            [autoView] => index
+            [viewData] => Array
+                (
+                )
+
+            [modelName] => OrderNote
+            [modelNames] => Array
+                (
+                    [0] => ordernote
+                )
+
+            [debug] => 
+            [origObj] => 
+            [table] => note
+            [params] => Array
+                (
+                )
+
+            [ref_table] => orders
+            [ref_id] => 
+        )
+
+    [order_items] => 
+    [order_state] => 
+    [user] => 
+    [notes] => 
+    [card_type] => Visa
+    [card_name] => M Akena 
+    [card_number] => 0
+    [card_frommonth] => 
+    [card_fromyear] => 
+    [card_from] => /
+    [card_expirymonth] => 1
+    [card_expiryyear] => 1970
+    [card_expiry] => 1/1970
+    [issue_number] => 0
+    [card_cvv] => 0
+    [crypt] => mycrypt Object
+        (
+            [key] => tpsfbxuelachyrzkvqmnojwgid
+        )
+
+    [status_detail] => 
+    [card_start] => 
+    [card_issue_number] => 
+    [payment_engine] => sagepay/direct
+)
+

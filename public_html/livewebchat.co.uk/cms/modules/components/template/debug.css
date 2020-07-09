@@ -1,0 +1,33 @@
+ul.debug-list {
+	padding-left: 10px;
+	color: white;
+}
+ul.debug-list ul {
+	display: none;
+}
+ul.debug-list .special {
+	font-weight: bold;
+	color: #f44;
+}
+ul.debug-list .all-special {
+	font-weight: bold;
+	color: #f44;
+}
+
+ul.debug-list {
+padding: 10px;
+margin-left: 15px;
+}
+ul.debug-list-even {
+background: #000;
+}
+
+ul.debug-list-odd {
+background: #333;
+}
+.debug-handle:before {
+content: "@ ";
+}
+.debug-handle-open {
+	font-weight: bold;
+}

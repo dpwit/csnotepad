@@ -1,0 +1,1095 @@
+/*
+ * LESS - extends css with variables, mixins, operations and nested rules.
+ * http://leafo.net/lessphp/
+ */ 
+
+/* variables */
+@text: #bbbbbb; /* grey */
+@headerText: #6D5151; /* purple */
+@titleText: #999999; /*grey */
+@link: #F2F3B7; /* offyellow*/
+@linkOver: #EDED6E; /*bolderoffyellow*/
+@buttonText: @link;
+@buttonBg: #222222;
+@buttonBgBorder: #333333;
+@buttonBgOver: #333333;
+@buttonBgBorderOver: #666666;
+@formText: #333333;
+@formInputBg: #666666;
+@basketW: 640px;
+@inputW: 300px;
+@maroon: #884C4C;
+@unused-brighter_off-yellow: #F4F076;
+
+/* mixins */
+.1pxImgBorder { 
+border: 1px solid @buttonBgBorderOver; 
+}
+
+
+body {
+    background: url(../images/rsf_bg-1680w1094h.png) repeat center 0 transparent;
+    background-attachment: fixed;
+    color: white;
+    line-height: 16px;
+	font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+h1 {
+    font-size: inherit;
+    color: @link;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+h2 {
+	margin: 0;
+}
+h2 a {
+	margin: 0;
+	color: @headerText; 
+}
+
+
+h3 {
+    color: @titleText;
+    margin:  0 0 5px 0;
+    font-weight: bold;
+	font-family: Verdana;
+	font-size: 1.3em;
+}
+
+h4 {
+    color: @titleText;
+    position: relative;
+    margin: 0;
+}
+
+h5, h6 {
+    color: #6F7072;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+h5 {
+    color: #ffffff;
+}
+
+h6 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+a, a:visited, a:active  {
+    color: @link; 
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: @linkOver;
+    text-decoration: none;
+}
+
+p, div {
+    color: @text;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* ########## SECTIONS ########## */
+
+#header {
+    background: url(../images/rsf_header_01.png) repeat-x center top transparent;
+    height: 180px;
+}
+
+#header > img {
+    width: 1178px;
+    display: block;
+    margin: 0 auto;
+}
+
+#headerContainer {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#headerLogo {
+    position: absolute;
+    left: -90px;
+}
+
+#musicPlayer {
+    height: 100px;
+	text-align: center;
+}
+
+.preContainer {
+    background-color: black;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container {
+    background-color: black;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+	overflow: hidden;
+}
+
+.footer {
+    clear: both;
+    background: url(../images/hborder.png) repeat-x left bottom black;
+    height: 20px;
+    border-left: 20px solid black;
+    border-right: 20px solid black;
+	position: relative;
+}
+
+.footer .fl, .footer .fr {
+    font-size: 10px;
+}
+
+.footerEnd {
+	border-bottom: 20px solid black;
+	padding: 5px;
+}
+
+/* ########## MENU ########## */
+#menu, #loginDetails, #cartDetails {
+    position: absolute;
+    top: -33px;
+    height: 33px;
+    line-height: 33px;
+    margin: 0 40px 0 70px;
+    text-transform: uppercase;
+    font-size: 10px;
+    background: @maroon;
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li {
+    display: inline;
+    float: left;
+}
+
+#menu a {
+	display: block;
+	padding: 0 15px 6px;
+	background-color: #884C4C;
+	font-size: 16px;
+	height: 27px;
+	float: left;
+}
+
+#menu .selected a {
+	background: none;
+}
+
+.cartDetails {
+    color: #000000;
+}
+
+#loginDetails {
+    right: 0;
+}
+
+#loginDetails a {
+    color: @link;
+}
+
+#loginDetails a:hover {
+    right: 0;
+    color: @linkOver;
+}
+
+#loginbox, #passwordbox {
+    padding: 5px;
+    background: @formInputBg;
+    border:
+    0;
+    font-family: Arial, Verdana, sans-serif;
+    font-size:
+    13px;
+}
+
+/* ########## COLS ########## */
+.column {
+    float: left;
+    padding: 0 20px 9999px;
+    margin: 20px 0 -9999px;;
+}
+
+#columnHeader {
+	width: 600px;
+	margin: 20px 0 0 20px;
+	float: left;
+}
+
+/* 3 col layout */
+#columnCol1 {
+    width: 280px;
+    background: url(../images/vborder.png) repeat-y right top transparent;
+}
+
+#columnCol2 {
+    width: 280px;
+    background: url(../images/vborder.png) repeat-y right top transparent;
+}
+
+#columnCol3 {
+    width: 280px;
+}
+
+/* 2 col layout (with columnCol1) */
+#columnDouble {
+    width: 600px;
+	margin-bottom: 0;
+	padding-bottom: 0; 
+}
+
+/* shop layout */
+#columnThin {
+    clear: both;
+    width: 150px;
+    background: url(../images/vborder.png) repeat-y right top transparent;
+}
+
+#columnWide {
+    width: 730px;
+    float: left;
+	margin-bottom: 0;
+	padding-bottom: 0; 
+}
+
+/* ########## DETAIL ########## */
+
+
+.headerText {
+    font-weight: bold;
+	color: @headerText;
+	margin: 0 0 20px 0;
+	padding: 10px;
+   	background: url(/html/images/bg_dgrey-diag.gif) repeat-x left bottom transparent;
+	font-size: 2.5em;
+}
+
+
+#columnCol2 img, #columnCol3 img {
+.1pxImgBorder;
+}
+
+.newsfeature, .newsbrief {
+    background: url(../images/hborder.png) repeat-x left bottom transparent;
+    margin: 0 0 20px;
+}
+
+.newsfeature {
+    padding: 0 0 8px;
+}
+
+.newsbrief {
+    padding: 0 0 15px;
+}
+
+.news-article img {
+    margin: 0 0 5px;
+.1pxImgBorder;
+}
+
+.newsfeature img {
+    margin: 0 0 5px 0;
+.1pxImgBorder;
+}
+
+.newsbrief img {
+    clear: both;
+    width: 75px;
+    height: 75px;
+    float: left;
+    display: block;
+    margin: 0 10px 5px 0;
+.1pxImgBorder;
+}
+
+.newsfeature p, .newsbrief p {
+    margin: 0 0 5px 0;
+}
+
+.newsfeature > h4 {
+    padding: 0 0 10px 0;
+}
+
+.newsbrief > div {
+    padding: 0 0 10px 0;
+    width: 170px;
+    float: left;
+}
+
+#columnHeader .sectionText {
+margin: 0;
+}
+
+
+/* ########## SHOP ########## */
+#categories ul {
+	margin: 0 0 0 20px;
+}
+#categories ul {
+	list-style-type: square;
+	list-style-position: outside;
+}
+#categories ul li {
+	list-style-type: square;
+}
+
+#categories ul ul {
+    margin: 0 0 15px 15px;
+}
+
+#categories ul li a {
+    color: @link;
+    width: 130px;
+    padding: 0 0 10px 5px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#categories > ul > li {
+    font-size: 20px;
+	}
+
+#categories ul ul li a {
+    padding: 0 0 5px 5px;
+    width: 90px;
+    font-size: 14px;
+}
+
+#categories ul li a:hover {
+color: @linkOver;
+/*	background: url(/html/images/bg_dgrey-diag.gif);*/
+}
+
+
+/* ########## ARTISTS PAGE ########## */
+#artistMenu li {
+    background: url("../images/hborder.png") repeat-x scroll left bottom transparent;
+    font-size: 13px;
+    padding: 0 0 15px;
+    margin: 0 0 10px;
+}
+
+.artistImage {
+    margin: 0 10px 0px 0;
+    clear: both;
+    display: block;
+    float: left;
+.1pxImgBorder;
+}
+
+.artistImageOver {
+    border: 1px solid @buttonBgBorderOver;
+}
+
+.artistTitle {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.artistShortDesc {
+    color: @text;
+}
+
+.artistShortDescOver {
+    color: #bbb;
+}
+
+.artistItem a {
+    display: block;
+    color: @link;
+	padding: 5px;
+}
+
+.artistItem a:hover, .artistItem.selected a {
+    color: @linkOver !important;
+	background: url(/html/images/bg_dgrey-diag-mirrored.png);
+}
+.artistItem.selected a {
+	cursor: default;
+}
+
+.profilePhoto {
+		margin: 0 0 10px 0;
+}
+
+.profileName {
+	margin: 0 0 5px 0;
+}
+
+/* ########## BROWSE PAGE ########## */
+
+#browseList ul {
+    position: relative;
+    clear: both;
+    height: 160px;
+    margin: 0 0 20px 0;
+}
+
+#browseList ul li {
+    width: 230px;
+    position: relative;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.browseImage {
+	float: left;
+    width: 110px;
+    height: 110px;
+    margin: 0 10px 5px 0;
+	.1pxImgBorder;
+}
+
+/*
+.browsePrice {
+    font-size: 16px;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    padding: 4px 0;
+    border: 1px solid @buttonBgBorder;
+    margin:
+    0 0 5px 0;
+}
+*/
+.browseShortDesc {
+    margin: 0 0 10px 0;
+}
+
+.browseShortDesc p {
+    margin: 0;
+}
+
+.browseArtists {
+	clear: both;
+}
+/* ########## PRODUCT DETAILS ########## */
+
+
+#productShow {
+    width: 405px;
+    margin: 0 20px -9999px 0;
+    background: url(../images/vborder.png) repeat-y right top transparent;
+    padding: 0 20px 9999px 0;
+    float: left;
+}
+
+#productShow #productTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+#productShow #productArtists {
+    margin: 0 0 10px 0;
+}
+
+#productDesc {
+    clear: both;
+    padding: 0 0 0 0;
+    margin: 0 0 10px 0;
+}
+
+#productImage {
+    margin: 0 0 20px 0;
+}
+
+#productImage img {
+    width: 200px;
+.1pxImgBorder;
+}
+
+
+/* ########## PRODUCTS PLAYER ########## */
+
+#playerTracks {
+background: #333;
+width: 280px;
+float: left;
+}
+
+#playerTracks #productCat, #playerTracks #productItems {
+background: #111;
+margin: 0 5px;	
+border-bottom: 5px solid #333;
+}
+
+#playerTracks .playerCat {
+font-weight: bold;
+font-size: 10px;
+background: #222;
+}
+
+#playerTracks .playerTrack, #playerTracks .playerCat, #playerTracks .playerCatInfo {
+margin: 0 5px;
+padding: 5px 10px;
+}
+
+#playerTracks .playerCat {
+margin: 0;
+}
+
+
+#playerTracks .playerTrack {
+background: #111;
+}
+
+#playerTracks .trackTitle, #playerTracks .playerCatTitle {
+float: left;
+padding: 2px 0;
+outline: none;
+}
+
+#playerTracks .addToCart {
+float: right;
+padding: 1px 5px;
+}
+
+.trackPrice > img {
+	vertical-align: bottom;
+	margin: 0 0 0 6px;
+	border: none !important;
+}
+
+#productPrice {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    color: white;
+}
+
+#qty {
+    width: 20px;
+    padding: 2px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 0 0 5px;
+}
+
+/* ########## FORMS ########## */
+
+.formHeader {
+color: titleText;
+padding: 0 0 10px 0;
+border-bottom: 2px dotted #666;
+margin: 0 0 20px 0;
+}
+
+input {
+background: @formInputBg;
+border: none;	
+color: @formText;
+}
+
+.form_input input,
+.form_input textarea,
+.form_input select,
+#recaptcha_response_field {
+	width: @inputW - 6;
+	padding: 3px;
+	margin: 0 0 20px 0;
+	border: 0;
+	background: @formInputBg;
+	color: @formText;
+}
+
+ .form_input select {
+	 width: @inputW;
+	 padding: 2px 5px;
+}
+
+
+textarea {
+	height: 100px;
+}
+
+.submitButton {
+	clear: both;
+	width: @basketW;
+	margin: 0 auto;
+}
+
+.submitMixin {
+	padding: 7px;
+	background: @buttonBg;
+	color: @buttonText;
+	border: 1px solid @buttonBgBorder;
+	cursor: hand;
+	cursor: pointer;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	display: block;
+	margin: 10px 0px 10px 0;
+	float: right;
+
+}
+input[type='submit'] {
+.submitMixin;	
+	}
+.buttonSubmit {
+.submitMixin;
+}	
+
+
+.submitOver {
+	background: @buttonBgOver !important;
+	border: 1px solid @buttonBgBorderOver !important;
+	color: @linkOver;
+}
+
+.form_notes {
+margin: -20px 0 0;
+font-size: 10px;
+}
+
+.form_label {
+	width: @inputW;
+	font-weight: bold;
+	margin: 0 0 3px 0;
+	}
+.form_row {
+	width: @inputW;
+	float: left;
+	margin: 0 20px 0 0;
+}
+.form_error {
+	position: relative;
+	top: -17px;
+	margin: 0 0 10px 0;
+font-weight: bold;
+color: red;
+}
+
+.form_footer {
+	clear: both;
+}
+
+#errorBox, .error {
+	clear: both;
+	padding: 20px;
+	margin: 0 0 20px;
+	background: #FBE3E4; 
+	border: 5px solid #FBC2C4;
+}
+#errorBox p, #errorBox h3, .error p {
+	color: #8a1f11;
+}
+
+#recaptcha_image {
+	margin: 0 0 10px 0;
+}
+
+.columnCol2 h4 {
+	margin: 0 0 2px 0;	
+}
+
+/* ########## CONTACT ########## */
+
+#contactContent {
+	width: @inputW;
+}
+
+
+/* ######## CHECKOUT ######## */
+
+thead th {
+	padding: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: @titleText;
+	background: none;
+	border-bottom: 4px double #A3797A;
+}
+
+#contentLogin, #contentRegister {
+	width: 340px;
+	margin: 0 20px 20px 0;
+	float: left;
+	}
+
+#contentLogin {
+	margin: 0 0 20px;
+}
+
+.basket {
+	width:  @basketW;
+	margin: 0 auto 10px;
+}
+
+tbody td {
+	background: url(../images/hborder.png) repeat-x left bottom transparent;
+	padding: 5px;
+}
+
+.basketItem {
+	width: 80%;
+}
+.basketQty, .basketPrice {
+	width: 10%;
+/*	text-align: center; */
+}
+
+.basketPrice, .checkoutPrice {
+	text-align: right;
+}
+
+.payment-method {
+	width: @basketW;
+	margin: 0 auto 10px;
+	padding: 10px 0;
+}
+.payment-method span {
+	font-size: 14px;
+	font-weight: bold;
+text-transform: uppercase;
+color: @titleText;
+}
+
+.payment-method input[type='radio'] {
+position: relative;
+top: 1px;
+}
+
+.payment-navigation {
+	width: @basketW;
+	clear: both;
+	margin: 0 auto;
+}
+
+.formButtons {
+	margin: 20px 0 0 0;
+	float: right;
+}
+
+.formButtons input[type='submit'] {
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.form_main {
+ }
+
+.formSection {
+	margin: 0 0 20px 0;
+}
+
+.formSection-Details {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.formSection-Address {
+	float: left;
+}
+
+.card_expiry, .card_from {
+	width: 150px;
+	margin: 0;
+}
+
+.card_expiry {
+margin: 0 20px 0 0;
+}
+
+.inputQty {
+	text-align: center;
+}
+
+.card_expirymonth, .card_expiryyear, .card_frommonth, .card_fromyear  {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+.card_expirymonth select, .card_expiryyear select, .card_frommonth select, .card_fromyear select {
+width: 70px;
+}
+
+
+/* ########## BUTTONS & ICONS ########## */
+
+.pagination {
+	padding: 10px 20px;
+	background: #111;
+	font-weight: bold;
+	text-align: right;
+}
+
+
+.buttonInline {
+	display: inline-block;
+	margin: 2px 0;
+    padding: 1px 3px;
+	background: @buttonBg;
+    color: @link;
+	cursor: hand;
+	cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	border: 1px solid @buttonBgBorder;
+}
+
+.buttonInline:hover {
+    background: @buttonBgOver;
+	color: @linkOver;
+	border: 1px solid @buttonBgBorderOver !important;
+}
+
+.buttonBox, .submit-link {
+padding: 7px 10px;
+background: @buttonBg;
+color: @Link;
+border: 0;
+cursor: hand;
+cursor: pointer;
+font-weight: bold;
+text-transform: uppercase;
+font-size: 11px;
+margin: 5px 0;
+}
+
+.buttonBox:hover {
+    background: @buttonBgOver;
+	color: @linkOver;
+}
+
+.browseButton {
+	float: left;
+	position: relative;
+	margin: 0 0 5px;
+}
+
+.browseButton a {
+	height: 16px;	
+    width: 90px;
+    padding: 4px 0;
+    color: @link;
+    position: relative;
+    margin: 0;
+	height: 16px;	
+	line-height: 16px;
+	float: left;
+	text-align: center;
+	text-indent: -27px;
+}
+
+/* 
+ * the cart icon used was created by: 
+ * http://www.famfamfam.com
+ */
+.previewIcon, .basketIcon, .viewIcon {
+	position: absolute;
+	top: 4px;
+	right: 0px;
+}
+.trackPlayIcon img, .basketIcon img, .viewIcon img {
+border: none !important;
+}
+
+.trackPlayIcon {
+	float: left;
+	margin: 0 8px 0 0;
+}
+
+/* ########## BITS ########## */
+
+.mp3-floating {
+position: absolute;
+right: 30px;
+top:30px;
+z-index: 100;
+}
+
+
+.link-image {
+	float: left;
+}
+
+.link-image img {
+width: 50px;
+height: 50px;
+.1pxImgBorder;
+}
+
+.link-text {
+	margin: 0 0 0 70px;
+}
+
+.fl {
+float:left;
+}
+
+.fr {
+float:right;
+}
+
+.borderTop {
+	background: url(../images/hborder.png) repeat-x left top transparent;
+	padding: 20px 0 0 0;
+}
+
+.borderBottom {
+	background: url(../images/hborder.png) repeat-x left top transparent;
+	margin: 10px 0;
+}
+
+.rowEnd {
+    margin-right: 0 !important;
+}
+
+.final {
+	background-image: none;
+}
+
+
+/* ########## CLEARFIX ########## */
+/*
+http://perishablepress.com/press/2009/12/06/new-clearfix-hack/  
+*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+  	content: "\0020";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/* ########## ######## ########## */
+
+/*
+.play-button {
+width:23px; 
+height:22px;
+margin-right: 35px;
+margin-bottom: 10px;
+display: block;
+background: top left no-repeat url(../images/play-button.jpg);
+}
+.play-button:hover {
+background: top left no-repeat url(../images/play-button-hover.jpg);
+}
+#playButtonSmall {
+border: #000000;
+width: 15px;
+height: 15px;
+margin-right: 200px;
+display: block;
+background: top left no-repeat url(../images/play-button-small.jpg);
+}
+#playButtonSmall:hover {
+background: top left no-repeat url(../images/play-button-small-hover.jpg);
+}
+.playButtonDetail {
+width:15px; 
+height:15px;
+display: block;
+background: top left no-repeat url(../images/play-button-small.jpg);
+float: left;
+margin-right: 5px;
+}
+.playButtonDetail:hover {
+background: top left no-repeat url(../images/play-button-small-hover.jpg);
+}
+
+.disocgraphyCover {
+margin: 0 5px 5px 0;
+}
+.productBuy .productAddToCart a {
+padding: 0px;
+}
+.productBuy .productAddToCart a:hover {
+color: #ffffff;
+}
+.productMore {
+margin: 0px;
+}
+*/
+
+/* ############### NOT USED ################## */
+
+/*
+#productGallery {
+    clear: both;
+    width: 386px;
+    padding: 20px 0 0 0;
+    margin: 20px 0;
+    background: url(../images/hborder.png) repeat-x left top transparent;
+}
+
+#productGallery img {
+width: 100px;
+margin: 0 10px 0 0;
+}
+*/
+/*
+table {
+    width: auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+    *border-collapse: expression('separate', cellSpacing = '20px');
+    margin: 0 0 10px 10px;
+}
+
+td {
+width: 195px;
+background: white;
+padding: 10px;
+}
+
+td img {
+width: 193px;
+border: 2px solid #ccc;
+}
+*/
+
+.preview-wrapper {
+float: right;
+}
+.basket-image {
+height: 32px;
+width: 32px;
+float: left;
+padding: 3px;
+}
+.basket-label {
+display: block;
+float: left;
+padding-left: 30px;
+padding-top: 10px;
+}

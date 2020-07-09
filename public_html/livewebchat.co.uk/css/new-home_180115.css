@@ -1,0 +1,113 @@
+#freetrial {
+	display: block;
+	width:136px; height:140px;
+	background:url('/images/freetrial.jpg') no-repeat top center;
+	float:left;
+	margin:40px 0 0 40px;
+}
+
+#freetrial:hover {
+	background-position: center bottom;	background-repeat:no-repeat;
+}
+#freetrial:active {
+	background-position:center bottom;	background-repeat:no-repeat;
+}
+.phonenumber {background: #F3F3F3; padding: 10px; font-size: 24px; color: #3399FF; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; font-weight: bold;}
+.phonenumber h1 {font-size: 24px; padding: 0px; line-height: 30px; color: #3399FF;}
+.phonenumber span {float: right; line-height: 30px; color: #FF8834; font-size: 30px;}
+
+.callbackbox .innerDiv form {height: 196px;}
+.callbackbox .innerDiv {height: 220px;}
+
+.homeleft {float: left; width: 451px; padding: 10px; background: #f3f3f3; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top: 10px; height: 204px;}
+.homeleft h1 {font-size: 24px; font-weight: bold; padding-bottom: 2px;}
+.homeleft h2 {font-size: 18px; color: #999; margin-bottom: 10px; font-style: italic;}
+
+.homepoints {font-size: 18px;  margin-left: 0px; list-style: none; color: #4991DD; float:left;}
+.homepoints li {margin-bottom: 5px; padding-left: 25px; background: url('/images/green-tick.png') left center no-repeat}
+.homepoints li span {color: #666;}
+
+.subheader {float: left; width: 936px; padding: 0px; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top: 0px;}
+.subheader h2 {font-size: 18px; color: #999; margin-bottom: 10px;}
+.subheader span {float: right; line-height: 20px; color: #666; font-size: 20px;}
+
+.callbackbox {margin-bottom: 28px;}
+
+.tabBox{float: left; margin-bottom: 10px}
+.tabsNav{height:30px;width:935px}
+.tabsNav ul{margin-bottom:0}
+.tabsNav li {float:left;list-style:none outside none; padding-left:0}
+.tabsNav li + li {float:left;list-style:none outside none; margin-left:2px;padding-left:0}
+.tabsNav li a{display: block; width: 220px; height: 30px; background: #E7E7E7; color: #777; text-align: center; line-height: 30px; font-size: 14px; border-radius: 5px 5px 0 0; -moz-border-radius: 5px 5px 0 0px; -webkit-border-radius: 5px 5px 0 0; -goog-ms-border-radius: 5px 5px 0 0;}
+.tabsNav li a.longer {width: 269px;}
+.tabsNav li a:hover{background: #e2e2e2; text-decoration: none;}
+.tabsNav li.last{margin-right:0}
+.tabsNav li.small a{width:96px}
+.tabsNav li a.selected{background: #eee;color:#58585A}
+#scroller-body{background: #eee ;padding-bottom:30px;width:277px}
+#tabMask{height: 195px; overflow:hidden;position:relative;width:935px;}
+#tabContent .contentTab{background:#eee;float:left;height:185px; width: 925px}
+#tabContent h2{color: #3399FF}
+
+.contentTab {padding: 10px 0 0 10px; position: relative;}
+.contentTab .col {float: left; width: 452px; margin-right: 10px;}
+
+.latestnews {width: 935px; margin-bottom: 10px; height: 90px;}
+.newsinsert {width: 250px;}
+
+.contentTab .product {margin-right: 10px; margin-bottom: 10px; width: 148px; background-position: right; background-repeat:no-repeat; background-color: #fff; border:none;}
+.contentTab .product .readMore {display: none;}
+
+.contentTab ol {list-style: decimal outside; margin-lefT: 40px;}
+
+.morelink {position: absolute; bottom: 10px; right: 10px;}
+
+.shade_me {width: 935px;}
+
+	.phonenumber {background: none; padding: 0 0 10px;}
+	.homeleft {background: none; padding: 0px; width: 471px;position:relative;}
+	.newheader {width: 936px; height: 390px; padding-left: 32px; padding-right: 32px; background:url(../images/middleBg.png) repeat-y; overflow:hidden;}
+	.latestnews {background: none;}
+	.latestnewsheading {padding: 20px 15px;}
+	.newsinsert {border-left: 1px solid #ccc; height: 68px; padding: 0px 0 0px 10px; width: 247px}
+	.newsinsert + .newsinsert { margin-left: 10px;}
+	.newsinsert p {margin: 0px;}
+	div#header {display:none;}
+
+	.clearfix:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+		zoom:1;
+		}
+	.clearfix { display: inline-table; }
+	/* Hides from IE-mac \*/
+	* html .clearfix { height: 1%; }
+	.clearfix { display: block; }
+	/* End hide from IE-mac */
+
+
+/* Taken out of Home.php */
+	.phonenumber {background: none; padding: 0 0 10px;}
+	.homeleft {background: none; padding: 0px; width: 471px;}
+
+	.tabsNav {position: relative; z-index: 50;}
+	.tabsNav li a.selected {background: #fff; border: 1px solid #ccc; border-width: 1px 1px 0; margin-bottom: -1px; width: 218px;}
+	.tabsNav li a.longer.selected {width: 266px;}
+
+	.tabs {position: relative; z-index: 20;}
+	#tabContent .contentTab {background: none;}
+	#tabMask {border: 1px solid #ccc; width: 935px;}
+
+	#tabContent .contentTab {height: 156px;}
+	#tabMask {height: 166px;}
+
+	.latestnews {background: none;}
+	.latestnewsheading {padding: 20px 15px;}
+	.newsinsert {border-left: 1px solid #ccc; height: 68px; padding: 0px 0 0px 10px; width: 247px}
+	.newsinsert + .newsinsert { margin-left: 10px;}
+	.newsinsert p {margin: 0px;}
+	div#header {display:none;}

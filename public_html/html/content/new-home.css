@@ -1,0 +1,47 @@
+.phonenumber {background: #F3F3F3; padding: 10px; font-size: 24px; color: #3399FF; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; font-weight: bold;}
+.phonenumber h1 {font-size: 24px; padding: 0px; line-height: 30px; color: #3399FF}
+.phonenumber span {float: right; line-height: 30px; color: #FF8834; font-size: 30px;}
+
+.callbackbox .innerDiv form {height: 163px;}
+.callbackbox .innerDiv {height: 200px;}
+
+.homeleft {float: left; width: 451px; padding: 10px; background: #f3f3f3; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top: 10px; height: 204px;}
+.homeleft h1 {font-size: 24px; font-weight: bold; padding-bottom: 2px;} 
+.homeleft h2 {font-size: 18px; color: #999; margin-bottom: 10px; font-style: italic;}
+
+.homepoints {font-size: 18px;  margin-left: 0px; list-style: none; color: #4991DD}
+.homepoints li {margin-bottom: 10px; padding-left: 25px; background: url('/images/green-tick.png') left center no-repeat}
+.homepoints li span {color: #666;}
+
+.callbackbox {margin-bottom: 2px;}
+
+.tabBox{float: left; margin-bottom: 10px}
+.tabsNav{height:30px;width:935px}
+.tabsNav ul{margin-bottom:0}
+.tabsNav li {float:left;list-style:none outside none; padding-left:0}
+.tabsNav li + li {float:left;list-style:none outside none; margin-left:2px;padding-left:0}
+.tabsNav li a{display: block; width: 220px; height: 30px; background: #E7E7E7; color: #777; text-align: center; line-height: 30px; font-size: 14px; }
+.tabsNav li a.longer {width: 269px;}
+.tabsNav li a:hover{background: #e2e2e2; text-decoration: none;}
+.tabsNav li.last{margin-right:0}
+.tabsNav li.small a{width:96px}
+.tabsNav li a.selected{background: #eee;color:#58585A}
+#scroller-body{background: #eee ;padding-bottom:30px;width:277px}
+#tabMask{height: 195px; overflow:hidden;position:relative;width:935px;}
+#tabContent .contentTab{background:#eee;float:left;height:185px; width: 925px}
+#tabContent h2{color: #3399FF}
+
+.contentTab {padding: 10px 0 0 10px; position: relative;}
+.contentTab .col {float: left; width: 452px; margin-right: 10px;}
+
+.latestnews {width: 935px; margin-bottom: 10px; height: 90px;}
+.newsinsert {width: 250px;}
+
+.contentTab .product {margin-right: 10px; margin-bottom: 10px; width: 148px; background-position: right; background-repeat:no-repeat; background-color: #fff;}
+.contentTab .product .readMore {display: none;}
+
+.contentTab ol {list-style: decimal outside; margin-lefT: 40px;}
+
+.morelink {position: absolute; bottom: 10px; right: 10px;}
+
+.shade_me {width: 935px;}

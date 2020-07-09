@@ -1,0 +1,32 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+
+    <appender name="bozbozFileAppender" class="LoggerAppenderFile">        
+        <param name="file" value="/www/business/15327/public_html/order_log.log" />
+    </appender>
+
+    <appender name="bozbozEmailAppender" class="LoggerAppenderMail">
+        <param name="to" value="orderfailures@bozboz.co.uk" />
+        <param name="from" value="orderfailures@bozboz.co.uk" />
+        <param name="subject" value="CSNotepad - Transaction failure" />
+    </appender>
+
+    <appender name="clientEmailAppender" class="LoggerAppenderMail">
+        <param name="to" value="danielb@bozboz.co.uk" />
+        <param name="from" value="support@bozboz.co.uk" />
+        <param name="subject" value="Shop transaction failure" />
+    </appender>
+
+    <root>
+    	
+    </root>
+
+    <logger name="bozboz">
+        <appender_ref ref="bozbozFileAppender" />
+        <!-- <appender_ref ref="bozbozEmailAppender" /> -->
+    </logger>
+
+    <logger name="client">
+        <appender_ref ref="clientEmailAppender" />
+    </logger>
+
+</configuration>

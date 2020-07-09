@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+
+body { font: 12px Arial; text-align: left }
+h2 { overflow: hidden }
+strong { font-weight: bold }
+a {	text-decoration: none; }
+input,
+textarea,
+select { border: 1px solid #CCC; padding: 2px; margin-bottom: 5px }
+label { color: #555; margin-bottom: 3px }
+
+/* Header section */
+
+	#leftMenu { float: left; border: 1px solid #CCC; margin-right: 10px}
+		#leftMenu h2 { width: 210px; background: #000; color: #FFF; margin: -1px -1px 1px; padding: 0 10px; font: bold 16px/30px Arial }
+		#leftMenu ul { padding: 5px; line-height: 0 }
+			#LeftMenu li { }
+			#leftMenu li a { line-height: 18px; color: #333; font-weight: bold; display: block; padding: 3px 5px; margin-bottom: 2px }
+				#leftMenu li a:hover { background: #EEE; color: #000 }
+			#leftMenu .subCat { margin-left: 12px; padding: 0 }
+				#leftMenu .subCat a { color: #666 }
+
+	#mainMenu { float: left; width: 720px }
+		#mainMenu h2 { background: #333; margin: 10px 10px 0; padding: 3px 5px; color: #BBB; font-weight: normal; font-size: 12px }
+			#mainMenu h2 a:last-child { font-weight: bold }
+			#mainMenu h2 a:hover { color: #FFF }
+		#mainMenu ul { margin-right: -12px }
+
+#header { background: #FFF; height: 135px; padding: 0; background: url('../images/top_pattern.png') repeat-x; }
+	#header .inner { position: relative; overflow: visible; height: 135px }
+	#header h1 { overflow: hidden; position: absolute; left: 50%; margin-left: -156px; background: url('../images/logo.png') no-repeat center; width: 312px; height: 110px; text-indent: 312px; line-height: 100px }
+	#header h2 { position: absolute; text-align: left }
+		#header h1 a,#header h2 a { display: block }
+	#shoppingInfo { float: right; color: #FFF; margin-top: 110px; line-height: 25px }
+		#shoppingInfo li { float: left; margin: 0 3px; text-transform: uppercase; font-size: 10px }
+			#shoppingInfo a { color: #FFF; display: block }
+			#shoppingInfo a:hover { color: #BBB }
+			#shoppingInfo a.bag { background: url('../images/basket.png') no-repeat 0 4px; padding-left: 20px }
+
+/* Navigation section */
+
+#nav { height: 25px; background: #444; margin-bottom: 10px; color: #FFF; font: bold 12px/25px Arial; text-transform: uppercase }
+	#menu li { float: left }
+		#menu a { color: #FFF; display: block; padding: 0 6px }
+		#menu a:hover,#menu a.on { background: #000; color: #DDD }
+	#mp3Player { float: right }
+
+/* Breadcrumb */
+
+#breadcrumb { background: #000; color: #BBB; width: 710px; float: left; padding-left: 10px; font: bold 12px/30px Arial; letter-spacing: 1px }
+	#breadcrumb a { color: #FFF }
+	#breadcrumb a.on { color: #000 }
+	#breadcrumb a:hover { text-decoration: underline; }
+	
+		
+		/* Shared classes */
+
+		.coolButton { background: #EEE; color: #222; font: bold 11px Arial; padding: 5px; border: 1px solid #AAA; text-transform: uppercase; display: inline-block; cursor: pointer }
+			.coolButton:hover {background: #DDD; border-color: #888}
+					
+		.inner { margin: 0 auto; width: 960px; overflow: hidden }
+		
+		.buylisten { background: #FFF; position: absolute; right: 5px; padding-left: 4px; display: inline }
+			.buylisten.left { position: static; display: block; margin-top: 2px }
+			.buylisten a { overflow: hidden; display: block; float: left; margin: 0 1px  }
+				.buylisten .listen { width: 16px; text-indent: 16px; background: url('../images/speaker_icon.png') no-repeat left center }
+				.buylisten .buy { overflow: visible; text-indent: 17px; color: #000; font-size: 10px; height: 14px; padding-top: 1px; font-weight:bold; background: url('../images/bag_icon.png') no-repeat left center }
+				.buylisten .info { width: 14px; text-indent: 14px; background: url('../images/info_icon.png') no-repeat left center }
+			.buylisten a:hover { text-decoration: underline }
+		
+		a.more { float: right; background: url('../images/more_bg.png'); color: #FFF; text-transform: uppercase; font: bold 14px/19px Arial; width: 53px; text-align: center }
+			a.more:hover {background-position: -53px 0 }
+	
+		.addthis_button { margin-bottom: 10px; display: block; width: 125px}
+				
+/* Footer section */
+
+#footer { width: 944px; margin: 10px auto; clear: both; color: #999; background: #000; font: normal 12px/19px Arial; overflow: hidden; padding: 4px 8px; position: relative }
+	#footer a { color: #888 }
+	#footer a:hover { color: #CCC }
+	#copyright { float: left; text-transform: uppercase; font-size: 11px }
+	#footer .site-by { float: right; margin-right: -3px; color: #DDD; font: normal 10px/18px Arial; height: 20px; width: 110px; text-align: right; overflow: hidden }
+		#footer .site-by img { float: right; margin-left: 5px; margin-top: 1px }
+
+	
+/* Artists Page */
+			

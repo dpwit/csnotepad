@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* Facebook Fan CSS for Skint */
+
+.fan_box
+.full_widget {
+	border: 1px solid #222;
+	border-bottom: none !important;
+}
+.fan_box
+.connections_grid
+.grid_item
+.name {
+	color: #AAA; 
+}
+
+.fan_box .full_widget .connect_top {background: #000000;}
+.connect_top a {color: #CCCCCC;}
+.connect_top a:hover {color: #CCCCCC;}
+.fan_box .connections {background: #000000; color: #CCCCCC; border-top: #222 1px solid;}
+.fan_box .connections_grid .grid_item {padding-right: 4px !important;}

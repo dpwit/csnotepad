@@ -1,0 +1,19 @@
+<?
+if(file_exists($file = dirname(__FILE__).'/../../config/config.php')) require_once($file);
+
+global $dbhost, $dbuser,$dbpass,$dbname , $project_title;
+
+$dbhost = '{$mysql_host}';
+$dbuser = '{$mysql_user}';
+$dbpass = '{$mysql_pass}';
+$dbname = '{$mysql_name}';
+
+$project_title = '{$project_name}';
+
+define("BASEPATH", dirname(__FILE__).'/');
+if(!defined('__SERVER_DOMAIN__')) define('__SERVER_DOMAIN__','{$server_domain}');
+define("MASTERURL", 'http'.($_SERVER['HTTPS']?'s':'')."://".__SERVER_DOMAIN__);
+define('BASEURL',MASTERURL);
+define('CMSURL',BASEURL.'/cms');
+
+?>

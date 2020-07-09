@@ -1,0 +1,1 @@
+[10-Mar-2017 00:21:36 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /data/call02/public_html/livewebchat.co.uk/blog/wp-includes/rss-functions.php on line 8

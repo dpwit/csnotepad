@@ -1,0 +1,74 @@
+@charset "utf-8";
+/*
+	* Filename: loaded.css
+	* Description: Global CSS
+	* Version: 1.0.0 (2010-07-27)
+	* Website: http://www.loadedrecords.com/
+	* Author: Sam King
+*/
+
+/* Header section */
+
+#header { background: #FFF url('../images/loaded/top_pattern.png') repeat-x }
+	#header .inner { background: url('../images/loaded/top_stripes.png') no-repeat right top; overflow: hidden }
+	#header h1 { position: static; background: url('../images/loaded/logo.png') no-repeat left top; width: 302px; margin: 40px 0 0 0; height: 64px; text-indent: 302px; line-height: 64px }
+	#shoppingInfo { margin-top: 6px }
+
+#menu a:hover,#menu a.on { color: #03F972 }
+		
+		/* Shared classes */
+		
+		.col h2 { background: url('../images/loaded/black_bg.png') no-repeat; padding: 0 10px; font: bold 16px/28px Arial; position: absolute; left: -1px; top: -29px; width: 210px }
+		
+		/* News section */
+		
+		#news h2 { background: url('../images/loaded/black_bg_big.png'); color: #F90446 }
+		
+		/* Featured from the Shop section */
+		
+		#featuredShop h2 { color: #03F972 }
+			
+		/* Upcoming Dates section */
+		
+		#upcomingDates { height: 257px;}
+			#upcomingDates h2 { color: #06E8FF }
+		
+		/* Sign up to the mailing list section */
+		
+		#signUp { margin-top: 68px; padding: 30px 10px 3px; width: 208px; overflow: visible; }
+			h2.signupH2 { background: url('../images/loaded/black_bg_signup.png') no-repeat; top: -58px; padding: 15px; text-align: center; font-size: 14px }
+				.signupH2 big { padding: 0 12px 0 0; font: bold 36px/26px Arial; text-align: center; text-transform: uppercase; color: #F90446; }
+				.signupH2 span { font-size: 12px; display: block; margin: 6px 0 0; text-align: left}
+				#signUp form { margin-top: -4px }
+					#signUp input { border: 1px solid #BBB; padding: 2px; font-size: 11px; margin: 3px; width: 150px; background: transparent }
+					#signUp label { font-weight: bold; float: left; line-height: 26px; width: 28px; padding: 0 5px; clear: left }
+					#signUp .go { background: url('../images/loaded/go_bg.png') no-repeat; text-indent: -200px; overflow: hidden; margin-top: 5px; border: none; float: right; width: 31px; height: 17px }
+					#signUp .go:hover { background-position: 0 0 }
+		/* Competitions section */
+		
+		#competitions { width: 210px }
+			#competitions h2 { width: 210px; background: url('../images/loaded/black_bg_big.png'); color: #06E8FF }
+		
+		/* Twitter section	*/
+
+		.twitter {}
+			.twitter h2 { background-image: url('../images/loaded/black_bg.png'); color: #03F972 }
+			.twitter ul { overflow: hidden; height: 250px }
+			.twitter li { border-color: #CCC }
+				.twitter p { color: #555 }
+				.twitter a { color: #000 }
+				.twitter small { color: #666 }
+					.twitter small { color: #666 }
+					
+		/* YouTube section */					
+		
+		.youTube h3 { background-image: url('/images/youtube_logo_bw_invert.jpg'); color: #333 }
+			.youTube h3 a { color: #333 }
+				.youTube h3 a strong { font-weight: bold; font-size: 14px }
+				.video span.ytLink { color: #555 }
+				.video p { color: #888 }
+		
+/* Footer section */
+
+#footer { background: #000; color: #FFF; font-size: 10px; margin-top: 20px; clear: both }
+	#footer a { color: #FFF; text-decoration: none } 

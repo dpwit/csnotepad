@@ -1,0 +1,26 @@
+<?
+	if(!@$message) $message='Updated';
+?>
+<h1><?=$message?></h1>
+<?
+$dontRedirect=true;
+	if(!@$dontRedirect)
+		redirectLastpage(false,@$delayRedirect);
+	if(@$_REQUEST['simplemodal']){
+		cms_no_template();
+	}
+	if(@$closeModal){
+?>
+		<script>
+			$(function(){
+				$.modal.close();
+				$.modal.close();
+				$('#simplemodal-overlay').hide();
+				$('#simplemodal-container').hide();
+				$('#simplemodal-overlay').remove();
+				$('#simplemodal-container').remove();
+			});
+		</script>
+<? 	
+	} 
+?>

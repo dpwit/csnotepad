@@ -1,0 +1,6 @@
+<?
+/**
+* @package BozBoz_CMS
+*/
+
+?>

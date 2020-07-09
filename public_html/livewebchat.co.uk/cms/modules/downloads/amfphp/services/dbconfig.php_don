@@ -1,0 +1,16 @@
+<?php
+if(file_exists(dirname(__FILE__).'/../../config/config.php')){
+	include(dirname(__FILE__).'/../../config/config.php');
+	define("DB_HOST", __MYSQL_HOST__);
+	define("DB_USER", __MYSQL_USER__);
+	define("DB_PASS", __MYSQL_PASS__);
+	define("DB_NAME", __MYSQL_NAME__);
+} else {
+	define("DB_HOST", "localhost");
+	define("DB_USER", "concorde_admin2");
+	define("DB_PASS", "gukbeb6s");
+	define("DB_NAME", "concorde_cms");
+}
+define("SERVER_ROOT",  dirname(dirname(__FILE__)));
+
+?>

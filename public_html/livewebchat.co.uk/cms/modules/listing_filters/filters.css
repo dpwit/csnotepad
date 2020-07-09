@@ -1,0 +1,9 @@
+ul.filter-list li.not-selected {
+	display: none;
+}
+div.filter {
+	float: left; 
+}
+.end-facetted-search {
+	clear:  both;
+}

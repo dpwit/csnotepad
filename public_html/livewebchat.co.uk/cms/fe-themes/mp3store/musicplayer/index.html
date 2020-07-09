@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Relic Sound Factory</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<script type="text/javascript" src="swfobject.js"></script>		
+	</head>
+	<body>
+		<div id="myContent">
+			<h1>Alternative content</h1>
+			<p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+		</div>
+		
+	</body>
+<a href="#" onClick="handleClick('mp3/one.mp3','its track one');">Track One</a>
+<a href="#" onClick="handleClick('mp3/two.mp3','its track two');">Track Two</a>
+<a href="#" onClick="handleClick('mp3/three.mp3','its track three');">Track Three</a>
+<a href="#" onClick="handleClick('mp3/four.mp3','its track four');">Track Four</a>
+
+
+<!-- LOOK WHERE THE CODE GOES, HERE AFTER THE DIV IT WONT WORK UNLESS IT GOES AFTER THE DIV -->
+
+		<script type="text/javascript">
+				
+		var flashvars = {};
+			
+		var params = { allowscriptaccess: "always"};
+				
+			swfobject.embedSWF("mp3player.swf", "myContent", "280", "100", "9.0.0", "expressInstall.swf", flashvars, params);
+		
+		function handleClick(newMp3URL, newTrackLabel)
+		{
+			document.getElementById( "myContent" ).callMe( newMp3URL, newTrackLabel);
+		}
+		
+		</script>
+</html>

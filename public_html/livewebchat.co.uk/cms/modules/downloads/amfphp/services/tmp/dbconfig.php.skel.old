@@ -1,0 +1,8 @@
+<?php
+define("DB_HOST", "{$mysql_host}");
+define("DB_USER", "{$mysql_user}");
+define("DB_PASS", "{$mysql_pass}");
+define("DB_NAME", "{$mysql_name}");
+define("SERVER_ROOT",  "{$root}/www/");
+
+?>

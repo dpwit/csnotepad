@@ -1,0 +1,6 @@
+<?
+	$sagepay_config = array (
+		"vendor"=>"{$sagepay_vendor}",
+		"live"=>"{$sagepay_mode}"=='Yes',
+	);
+?>

@@ -1,0 +1,2 @@
+[27-Feb-2017 18:50:16 UTC] PHP Fatal error:  Call to undefined function add_action() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/plugins/hello.php on line 60
+[17-Sep-2017 18:41:40 Europe/London] PHP Fatal error:  Call to undefined function add_action() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/plugins/hello.php on line 60

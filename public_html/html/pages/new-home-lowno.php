@@ -1,0 +1,1 @@
+<?php	$template->setTemplate('template-home');

@@ -1,0 +1,143 @@
+/* Simple Accordion Script 
+ * Requires Prototype and Script.aculo.us Libraries
+ * By: Brian Crescimanno <brian.crescimanno@gmail.com>
+ * http://briancrescimanno.com
+ * This work is licensed under the Creative Commons Attribution-Share Alike 3.0
+ * http://creativecommons.org/licenses/by-sa/3.0/us/
+ */
+
+if (typeof Effect == 'undefined')
+  throw("You must have the script.aculo.us library to use this accordion");
+
+var Accordion = Class.create({
+
+    initialize: function(id, defaultExpandedCount,pref) {
+        if(!$(id)) throw("Attempted to initalize accordion with id: "+ id + " which was not found.");
+	if(!pref) pref='';
+        this.accordion = $(id);
+        this.options = {
+            toggleClass: pref+"accordion_toggle",
+            toggleActive: pref+"accordion_active",
+            contentClass: pref+"accordion_content"
+        }
+        this.contents = this.accordion.select('div.'+this.options.contentClass);
+        this.isAnimating = false;
+        this.maxHeight = 0;
+	active = this.accordion.select('.'+this.options.toggleActive);
+	if(active &&  active.length>0) {
+       		this.current = active[0].next('.'+this.options.contentClass);
+	} else {
+	        this.current = defaultExpandedCount ? this.contents[defaultExpandedCount-1] : this.contents[0];
+	}
+        this.toExpand = null;
+
+        this.checkMaxHeight();
+        this.initialHide();
+        this.attachInitialMaxHeight();
+
+        var clickHandler =  this.clickHandler.bindAsEventListener(this);
+        this.accordion.observe('click', clickHandler);
+    },
+
+    expand: function(el) {
+        this.toExpand = el.next('div.'+this.options.contentClass);
+        if(this.current != this.toExpand){
+			this.toExpand.show();
+            this.animate();
+        }
+    },
+
+    checkMaxHeight: function() {
+        for(var i=0; i<this.contents.length; i++) {
+            if(this.contents[i].getHeight() > this.maxHeight) {
+                this.maxHeight = this.contents[i].getHeight();
+            }
+        }
+    },
+
+    attachInitialMaxHeight: function() {
+	if(!this.current) return;
+		this.current.previous('.'+this.options.toggleClass).addClassName(this.options.toggleActive);
+        if(this.current.getHeight() != this.maxHeight) this.current.setStyle({height: this.maxHeight+"px"});
+    },
+
+    clickHandler: function(e) {
+        var el = e.element();
+	count=5;
+	do {
+	        if(el['hasClassName'] && el.hasClassName(this.options.toggleClass) && !this.isAnimating) {
+        	    this.expand(el);
+		    break;
+	        }
+		el=el.parentNode;
+		count--;
+	} while(count>0);
+    },
+
+    initialHide: function(){
+        for(var i=0; i<this.contents.length; i++){
+            if(this.contents[i] != this.current) {
+                this.contents[i].hide();
+                this.contents[i].setStyle({height: 0});
+            }
+        }
+    },
+
+    animate: function() {
+        var effects = new Array();
+        var options = {
+            sync: true,
+            scaleFrom: 0,
+            scaleContent: false,
+            transition: Effect.Transitions.sinoidal,
+            scaleMode: {
+                originalHeight: this.maxHeight,
+                originalWidth: this.accordion.getWidth()
+            },
+            scaleX: false,
+            scaleY: true
+        };
+
+        effects.push(new Effect.Scale(this.toExpand, 100, options));
+
+        options = {
+            sync: true,
+            scaleContent: false,
+            transition: Effect.Transitions.sinoidal,
+            scaleX: false,
+            scaleY: true
+        };
+
+        effects.push(new Effect.Scale(this.current, 0, options));
+
+        var myDuration = 0.75;
+	this.current.style.overflow = 'hidden';
+	this.toExpand.style.overflow = 'hidden';
+	this.current.style.position = 'relative';
+	this.toExpand.style.position = 'relative';
+	this.toExpand.style.margin = 0;
+
+        new Effect.Parallel(effects, {
+            duration: myDuration,
+            fps: 35,
+            queue: {
+                position: 'end',
+                scope: 'accordion'
+            },
+            beforeStart: function() {
+                this.isAnimating = true;
+                this.current.previous('.'+this.options.toggleClass).removeClassName(this.options.toggleActive);
+                this.toExpand.previous('.'+this.options.toggleClass).addClassName(this.options.toggleActive);
+            }.bind(this),
+            afterFinish: function() {
+                this.current.hide();
+                this.toExpand.setStyle({ height: this.maxHeight+"px" });
+                this.current = this.toExpand;
+                this.isAnimating = false;
+            }.bind(this)
+        });
+    }
+
+});
+
+isFirstTimeHere=false;

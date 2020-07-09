@@ -1,0 +1,217 @@
+<?php
+function on($label) {
+	$currentLabel = MultiLabelContext::getLabel();
+	if ($label == 'all' && !$currentLabel) {
+		echo ' class="on"';
+	} else {
+		if ($label == $currentLabel->labelname) {
+			echo ' class="on"';
+		}
+	}
+} 
+?>
+
+<div id="skintvideos"></div>
+	<div id="content">
+		<div id="VideoPage" class="inner">
+		<div class="col">
+			<div id="artistsList" class="thinBorder box">
+				<h2>YouTube Channels</h2>
+				<div class="labels">
+					<a href="/videos"<?=on('all')?>>All</a>
+					<a href="/skint/videos"<?=on('Skint')?>>Skint</a>
+					<a href="/loaded/videos" style="margin-right: 0"<?=on('Loaded')?>>Loaded</a>
+				</div>
+				<ul>
+			<?php
+				$currentLabel = MultiLabelContext::getLabel();
+
+				$where = $currentLabel? array('uid'=>$currentLabel->uid) : array();
+				
+				$labels = Model::loadModel('labels')->getVisible($where,array());
+				
+				function getClass($uid) {
+					switch($uid)
+					{
+						case 1: return 's'; break;
+						case 2: return 'l'; break;
+						default: return; break;
+					}
+				}
+				
+				foreach($labels as $label) {
+					$currentLabel = $label;
+					
+					$urlPrefix = '/'.strtolower($currentLabel->labelname);
+					?><li><a class="<?=getClass($label->uid)?>" href="<?=$urlPrefix?>/videos/"><?=$label->labelname?> Records</a></li><?php
+				
+					$where = $currentLabel? array('label_uid'=>$currentLabel->uid) : array();
+					$where['youtubeChannel !='] = '';
+					$artists = Model::loadModel('artists')->getVisible($where,array());
+	
+					foreach($artists as $artist){
+						$urlPrefix = $currentLabel? '/'.strtolower($currentLabel->labelname) : '';
+						?><li><a class="<?=getClass($artist->label_uid)?>" href="<?=$urlPrefix?>/videos/<?=$artist->getSlug()?>"><?=$artist->name?></a></li><?php
+					}
+					
+				}
+			?>
+				</ul>
+
+				<?
+				
+					$urlParts = MultiLabelContext::getUrlParts();
+					$artistSlug = $urlParts[count($urlParts)-1];
+					$gallery_uid = 1;
+					if($artistSlug){
+						$artist = Model::loadModel('artist')->getBySlug($artistSlug,array('visible'=>0));
+						if($artist){
+							$ytChanName = $artist->youtubeChannel;
+							//var_dump($artist);die;
+						}
+						elseif($currentLabel){
+							$ytChanName = $currentLabel->youtubeChannel;
+							//var_dump($currentLabel);die;
+						}
+						else
+							$ytChanName = 'skintrecords';
+					}
+					//$gallery = Model::loadModel('gallery')->getAll();
+				?>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				//alert('<?=$ytChanName?>');
+				$('#skintvideos').youTubeChannel({ 
+		            userName: '<?=$ytChanName?>', 
+		            channel: 'uploads', 
+		            hideAuthor: true,
+		            numberToDisplay: 15,
+		            linksInNewWindow: false,
+								page:0
+								
+		            //other options
+		            //loadingText: "Loading...",                    
+		        });
+        		//$(document).pngFix();
+				var p = 0;
+				hasMore = false;
+				$('#ytLast').click(function(){
+					if(p>0)
+					$('#skintvideos').youTubeChannel({ 
+						userName: 'skintrecords', 
+						channel: 'uploads', 
+						hideAuthor: true,
+						numberToDisplay: 15,
+						linksInNewWindow: true,
+						page:--p
+						//other options
+						//loadingText: "Loading...",                    
+					});					
+				});
+				$('#ytNext').click(function(){
+					if(hasMore)
+					$('#skintvideos').youTubeChannel({ 
+						userName: 'skintrecords', 
+						channel: 'uploads', 
+						hideAuthor: true,
+						numberToDisplay: 15,
+						linksInNewWindow: true,
+						page:++p
+						//other options
+						//loadingText: "Loading...",                    
+					});
+				hasMore = false;
+				});
+			});
+			
+		</script>
+				
+					</div>
+                    </div>
+			<div class="last col">
+					<div id="breadcrumb">
+						<h3><a href="/">Home &gt;</a> <a href="/videos">Videos</a></h3>
+					</div>
+				<div id="Videos" class="thinBorder box">
+					<div class="bigVideo">
+						<object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/MNKt8RBk4wY&amp;hl=en_US&amp;fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/MNKt8RBk4wY&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+					</div>
+				<div class="videoList">
+                    	
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+                        
+					<div class="VideoHolder"> 
+						<img src="/images/VideoHolder.png" />
+					</div>
+                       
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+                        
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+						
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+						
+					<br />
+									
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+					
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+								
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+								
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+								
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>						
+						
+					<br />
+									
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+					
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+							
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+							
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+							
+					<div class="VideoHolder">
+						<img src="/images/VideoHolder.png" />
+					</div>
+					
+					<br clear="all" />
+						
+						<button id="ytLast" class="coolButton"> Last 15 </button>
+						<button id="ytNext" class="coolButton"> Next 15 </button>
+	<div id="youtubeComments"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

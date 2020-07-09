@@ -1,0 +1,457 @@
+/* ########## BASIC ELEMENTS ########### */
+body {
+    padding: 0px;
+    margin: 0px;
+	background-color: #E1E1DB;
+    background-image: url(../img/bg-silvergrad.png);
+    background-repeat: repeat-x;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+h1 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+
+p {
+    color: #000000;
+    font-size: 12px;
+    color: #000000;
+    font-size: 10px;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+
+a {
+    color: #0088CE;
+}
+
+a:hover {
+    color: #12AFFF;
+}
+
+/* ########## LAYOUT ########### */
+#pixelwidth {
+    width: 960px;
+    margin: 20px auto;
+    background-color: white;
+    text-align: left;
+	padding: 20px 10px;
+}
+
+#mainHolder {
+    width: 800px;
+    float: right;
+}
+
+#header {
+    padding: 10px;
+	margin: 0 0 10px 0;
+}
+
+#headerlogo {
+    float: left;
+    font-size: 28px;
+}
+
+#headeruserstatus {
+    float: right;
+    padding: 5px;
+}
+
+.listing-breadcrumb, .listing-search-form {
+	float: left;
+	padding: 10px;
+    margin: 0 0 20px 0;
+	background-color: #eee;
+}
+
+.listing-search-form {
+
+	float: right;
+}
+
+.cms-header, .cms-sub-links, .listing-links {
+    margin: 0 0 20px 0;
+    clear: both;
+    float: left;
+}
+
+.model-row-categorymodel td:first-child {
+	background: url("/cms/images/icons/circular/folder.png") no-repeat scroll 5px center;
+}
+.model-row-mp3bundlemodel td:first-child {
+	background: url("/cms/images/icons/circular/music.png") no-repeat scroll 5px center;
+	}
+
+
+/* ########## VERTICAL MENU ########### */
+#navigation {
+    display: block;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    clear: both;
+    background-color: #2192CC;
+    background-image: url('../img/bg-menunav.png');
+	float: left;
+}
+
+#navigation ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigation ul li {
+    float: none;
+    display: block;
+}
+
+#navigation ul li a {
+    width: 150px;
+    height: 31px;
+    display: block;
+    background-color: #2192CC;
+    background-image: url('../img/bg-menunav.png');
+    font-weight: bold;
+    color: white;
+    line-height: 31px;
+    text-decoration: none;
+    cursor: hand;
+    cursor: pointer;
+}
+
+/*   ????
+#navigation #user-menu a {
+    width: 80px;
+}
+*/
+#navigation ul.cms-section-menu li a, .cms-section-menu {
+    background-color: white;
+    color: black;
+    border-right: none;
+    background-image: none;
+}
+
+#navigation ul.cms-section-menu li a {
+    overflow: hidden;
+    height: 31px;
+    display: block;
+    color: #666;
+}
+
+#navigation ul.cms-section-menu li a:hover {
+    color: white;
+    background-color: #ddd;
+	border: 1px solid #ddd;
+}
+
+
+/* ########## Sub navigation ########### */
+#subnav {
+    padding: 0px;
+    margin: 0 0 20px 0;
+    float: left;
+    width: 100%;
+    width: 700px;
+}
+
+#subnav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#subnav ul li {
+    display: inline;
+}
+
+#subnav ul li a, .buttonblock {
+    float: left;
+	padding: 0 10px;
+	margin: 0 5px 0 0;
+	background-color: #2192CC;
+	background-image: url('../img/bg-menunav.png');
+	color: white;
+	width: auto;
+	height: 31px;
+	line-height: 31px;
+    cursor: hand;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+	border: none;
+font-family: Verdana, Arial, sans-serif;
+	}
+
+
+/* ########## Sub navigation 2 ########### */
+
+#subnav2 {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 700px;
+}
+
+#subnav2 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#subnav2 ul li {
+    display: inline;
+    margin: 1px;
+}
+
+#subnav2 a {
+    padding: 3px 7px 4px 7px;
+    float: left;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: #666666;
+    color: #000000;
+}
+
+/* ########## Hover ########### */
+
+#navigation ul li a:hover, #subnav ul li a:hover, .buttonblock:hover {
+	background-image: url('../img/bg-menunav_over.png');
+	height: 29px;
+	border: none;
+	border-top: 1px solid #329dd4;
+	border-bottom: 1px solid #027cbb;
+	color: #eee;
+
+}
+
+#navigation ul.cms-section-menu a:hover {
+	background-image: none;
+	height: 29px;
+	border: none;
+	border-top: 1px solid #329dd4;
+	border-bottom: 1px solid #027cbb;
+}
+
+
+/* ########## FORMS ########### */
+.form_label {
+    width: 80%;
+    color: #444;
+	font-weight: bold;
+	margin: 0 0 3px 0;
+}
+
+.form_row {
+    float: left;
+    width: 30%;
+    margin: 0 10px 10px 0;
+}
+
+.form_row_footer {
+    clear: left;
+}
+
+.form_colleft, .form_colright {
+    width: 50%;
+    float: left;
+}
+
+.form_input {
+    width: 80%;
+}
+
+.form_input input[type =
+'text'], .form_input select {
+    width: 99%;
+}
+
+.form_input textarea {
+    width: 99%;
+}
+
+.form_notes {
+    clear: both;
+}
+
+.formSection {
+    clear: both;
+}
+
+.reveal {
+    background: #eee;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+.reveal input[type =
+"file"] {
+    margin: 0 0 10px 0;
+}
+
+.reveal img {
+    margin: 0 0 10px 0;
+}
+
+input[type="submit"] {
+border: none;
+height: 29px;
+font-family: Verdana, Arial, sans-serif;
+}
+
+/* ###### FORM OVERRIDES ####### */
+.fckeditorfield {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 10px 0 !important;
+}
+
+.imagepreviewfileinput {
+	clear: both;
+	width: 45%;
+	text-align: center;
+    margin: 0 0 10px 0 !important;
+}
+
+.fckeditorfield .form_label, .imagepreviewfileinput .form_label {
+    text-align: left;
+}
+
+/* ########## MM ########### */
+
+.mm-selector-wrapper {
+	background: #eee;
+padding: 5px;	
+}
+.productselector, .mmsortedselector {
+	width: 45%;
+}
+
+.mm-selector-list {
+	background: #eee;
+	margin: 0 0 10px 0;
+}
+.mm-selector-list td {
+	padding: 5px;
+}
+
+/* ########## Tables ########### */
+
+table {
+    border-collapse: collapse;
+}
+
+thead, .tableHead {
+    font-size: 14px;
+    color: #666;
+    font-family: Lucida Sans Unicode, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid #ccc;
+    border-left: 2px solid white;
+}
+
+tfoot {
+    background-color: #ccc;
+}
+
+.tablecell {
+    color: #000000;;
+    padding: 5px;
+    background: transparent;
+    text-align: center;
+    border-left: 2px solid white;
+}
+
+.actionCell {
+    width: 300px;
+}
+
+.tablecellLeft {
+    color: #000000;;
+    font-size: 12px;
+    text-align: center;
+    border-left: none;
+}
+
+.actionCell {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cmstable {
+    color: #0A195E;;
+    font-family: arial;
+    font-size: 12px;
+    width: 700px;
+    width: 100%;
+	clear: both;
+}
+
+.cmstable .odd {
+}
+
+.cmstable .even {
+    background-color: #eee;
+}
+
+.cms-sub-links a {
+    display: block;
+    padding: 5px;
+    font-size: 0.8em;
+    float: left;
+}
+
+.cms-pagination {
+    float: right;
+}
+
+/* ########## MODAL ########## */
+
+#basic-modal-content {display:none;}
+#simplemodal-overlay {background-color:#000; cursor:wait;}
+#simplemodal-container {height:450px; width:1000px; /*color:#bbb;*/ background-color:#fff; border:4px solid #444; padding:12px;}
+#simplemodal-container code {background:#ffffff; border-left:3px solid #65B43D; color:#bbb; display:block; margin-bottom:12px; padding:4px 6px 6px;}
+/* #simplemodal-container a {color:#ddd;} */
+#simplemodal-container a.modalCloseImg {background:url(../img/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-15px; right:-16px; cursor:pointer;}
+#simplemodal-container #basic-modal-content {padding:8px;}
+#simplemodal-data {
+	overflow: auto;
+}
+
+
+/* ########## CLEARFIX ########## */
+/*
+http://perishablepress.com/press/2009/12/06/new-clearfix-hack/  
+*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+  	content: "\0020";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+

@@ -1,0 +1,70 @@
+p, label, h1, h2, h3, span{font-family: Arial, Helvetica, sans-serif}
+
+label, input, textarea {
+	display: block;
+}
+
+input, textarea {width: 240px; resize:vertical; padding: 3px}
+
+h1.fancy{background: url('/images/tel.png') left center no-repeat; font-size:40px; text-align: center; color:#39F; border-bottom: 1px solid #ddd; width: 400px; padding: 15px 0; margin: 0 auto }
+h3.fancy{font-size: 17px; text-align: left; font-weight: normal; color: #777; text-shadow:0px 2px 1px rgba(255,255,255,1); padding: 0 20px }
+h3.fancy span{font-size: 12px}F
+.box-fancy h2, .validation-success {font-size: 28px; text-align: left; font-weight: normal; color: #777; text-shadow:0px 2px 1px rgba(255,255,255,1); }
+.box-fancy h2 {margin-top: 0; color:#39F; font-weight: normal}
+label{font-size: 12px; color: #555; padding: 2px}
+
+
+
+.box-fancy{display:block; float: left; width: 240px; height: 150px; padding: 20px 20px 0}
+.box-fancy:first-child {margin-left: 10px;}
+.box-fancy img{display: block; margin: 0 auto; width: 200px;}
+
+
+.form-row {
+	padding: 10px 0 10px 0;
+}
+
+.validation-error {
+	font-size: small;
+	color: #FF0000;
+}
+
+.validation-success {text-align: center }
+.validation-success span{display: block; width: 300px; font-size:40px; color:#39F; margin: 160px auto 0; padding-bottom: 35px; border-bottom: 1px solid #ddd}
+.validation-success span.email{margin-top: 30px}
+.validation-success.notes {font-size: 16px; line-height: 1.5}
+
+img.email-icon {display: block; position: relative; margin: 0 auto}
+
+button.bt-support {
+	cursor: pointer;
+	background-color: #f57922;
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	padding: 10px 30px;
+	background: -moz-linear-gradient(
+		top,
+		#ff8731 0%,
+		#df5d00);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff8731),
+		to(#df5d00));
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #949494;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.3),
+		inset 0px 1px 2px rgba(255,255,255,1);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.3),
+		inset 0px 1px 2px rgba(255,255,255,1);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.3),
+		inset 0px 1px 2px rgba(255,255,255,1);
+	text-shadow:
+		0px 1px 0px rgba(92,92,92,1);
+}

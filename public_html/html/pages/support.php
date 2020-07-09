@@ -1,0 +1,3 @@
+<?
+
+$template->setTemplate('template-ajax');

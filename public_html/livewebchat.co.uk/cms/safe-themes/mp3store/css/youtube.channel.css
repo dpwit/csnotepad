@@ -1,0 +1,28 @@
+p.loader {
+	padding: 1em 1em 1em 3em;
+	background: transparent url("loader.gif") 1em center no-repeat;
+}
+
+a {
+	text-decoration:  none;
+}
+
+div.firstVideo {
+	padding-top: 0px;
+	background: #ff0000;
+}
+
+div#channel_div {
+	padding-top: 0px;
+}
+
+div#videos {
+	padding-top: 0px;
+}
+
+#ytPlayer {background: #000000; border: 1px solid #ccc; width: 640px; padding: 5px;}
+.video a.ytLink {float: left;}
+.video span.ytLink { width: 135px;}
+.video .ytLink img {width: 80px; margin: 5px 5px 0 0;}
+.video {clear:both; width:230px; min-height: 70px;}
+#skintvideos, #loadedvideos {width: 240px; float: left;}

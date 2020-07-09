@@ -1,0 +1,8 @@
+<?php
+define("DB_HOST", "localhost");
+define("DB_USER", "blueed33_admin");
+define("DB_PASS", "gukbeb6s");
+define("DB_NAME", "blueed33_cms");
+define("SERVER_ROOT",  "/home/blueed33/public_html/");
+
+?>

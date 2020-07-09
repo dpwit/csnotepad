@@ -1,0 +1,8 @@
+<?
+	$paypal_config = array (
+		"user"=>"{$paypal_api_user}",
+		"pass"=>"{$paypal_api_pass}",
+		"sig"=>"{$paypal_api_sig}",
+		"host"=>"{$paypal_host}",
+	);
+?>

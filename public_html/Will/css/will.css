@@ -1,0 +1,29 @@
+
+
+.middlecontent { width: 470px; float:left; }
+.middlecontent h1 { font: 20px Arial; font-weight: normal; color: #2E6AA5; padding-bottom: 10px; display: block;}
+.callbackbox{ position:relative; margin-left:5px; padding:10px; width: 430px; float: left; background-color: #f3e4dd; 
+-moz-box-shadow: 5px 5px 6px #999;
+-webkit-box-shadow: 5px 5px 6px #999;
+box-shadow: 5px 5px 6px #999; 
+		-moz-border-radius: 20px 20px;
+  border-radius: 20px 20px;
+  -webkit-border-radius: 20px 20px;}
+.callbackbox h2 { font-size: 24px; font-weight: bolder; text-align:left; }
+.callbackbox label { margin:10px 5px 6px 5px; text-align:left; }
+.callbackboxlabel { width:40px; }
+.callbackboxselect { width:100px; }
+.callbackbox input { float:right; margin:5px; }
+.callbackboxtime { float:right; width: 90px; margin: 5px;  }
+.callme { border:none; height:0px; padding:0px; padding-top:45px; width:214px; overflow: hidden;
+ background-image: url('../images/callmebutton.png'); text-align:center; }
+#telephone { position:absolute; top:-15px; right:-30px; }
+
+.latestnews { font-size:6px; overflow:hidden; width: 700px; height:70px; margin-top:20px; background-color:#f3f3f3; -moz-border-radius: 15px 15px;
+ border-radius: 15px 15px;
+ -webkit-border-radius: 15px 15px; }
+.newsinsert { float:left; width:260px; padding:5px; }
+.newsinsert p { margin-top:6px;}
+.latestnewsheading { float:left; padding:20px; padding-top:22px; }
+.latestnewsheading h2 { color:#2e6aa5; }
+.newsdivider { border-right: 1px solid #CCC; margin-right:5px; }

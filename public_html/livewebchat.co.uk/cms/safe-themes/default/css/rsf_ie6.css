@@ -1,0 +1,69 @@
+/* 
+---------------------------------------
+should make pngs transparent but crashes ie6 
+---------------------------------------
+
+* html img,
+* html .png{
+position:relative;
+behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+this.src = "transparent.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+);
+}
+
+---------------------------------------
+so.... using twinhelix's pngfix instead
+---------------------------------------
+*/
+
+img { behavior: url(css/iepngfix/iepngfix.htc) }
+
+
+.column { 
+/* normally 20px left&right ?!?! */
+padding-left: 19px;
+padding-right: 18px;
+}
+
+body {
+	text-align: center;
+}
+
+.preContainer, .container {
+	text-align: left;
+}
+
+.browseButton a {
+	text-indent: 0px;
+}
+.browseButton a span {
+display: none;
+}
+
+#browseList ul li {
+	margin: 0;
+}
+
+#categories ul ul li a {
+	line-height: 16px;
+}
+
+.buttonSubmit {
+	cursor: hand;
+	}
+
+#playerTracks .trackTitle, #playerTracks .playerCatTitle {
+width: 171px;
+}
+	
+.trackPrice {
+display: inline-block;
+padding-bottom: 3px;
+}
+.trackPrice img {
+	vertical-align: middle;
+	margin-left: 5px;
+}

@@ -1,0 +1,85 @@
+body {
+	background: #6d6d6d url("images/background.png") repeat-x;
+	font-weight: bolder;
+	color: white;
+	font-size: 30px;
+	font-family: verdana, sans-serif;
+}
+
+#container {
+        width:100%;
+        height:100%;
+}
+
+#content {
+	width:1024px;
+	height:768px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#header {
+	width:auto;
+	height:auto;
+}
+
+#footer {
+        width:600px;
+        height:200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#querybutton {
+        width:100px;
+        height:100px;
+	background-image:url("images/questionicon.png");
+	background-repeat:no-repeat;
+	float:left;
+	margin-left:100px;
+}
+
+#querymessage {
+	//float:left;
+}
+
+#promobutton {
+        width:100px;
+        height:100px;
+	background-image:url("images/exclaimicon.png");
+	background-repeat:no-repeat;
+	float:right;
+	margin-right:100px;
+}
+
+#promomessage {
+	//float:right;
+}
+
+#logo {
+	width:600px;
+	height:250px;
+	margin-left:auto;
+	margin-right:auto;
+        background:url("images/constructionlogo.png") no-repeat;
+}
+
+.clearfix {
+        clear:both;
+}
+
+#message {
+	width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#message p {
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.message {
+	display:none;
+}

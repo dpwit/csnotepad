@@ -1,0 +1,25 @@
+<?php
+	if(!$youtube_videoCode) return;
+?>
+<div class="featuredImage">
+	<object width="640" height="385">
+		<param name="movie" value="http://www.youtube.com/v/<?=$youtube_videoCode?>&amp;hl=en_GB&amp;fs=1"></param>
+		<param name="allowFullScreen" value="true"></param>
+		<param name="allowscriptaccess" value="always"></param>
+		<embed src="http://www.youtube.com/v/<?=$youtube_videoCode?>&amp;hl=en_GB&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="290"></embed>
+	</object>
+</div>
+<h2>Mirrors - Ways to an End</h2>
+<p>Matta - This Tape Will Self Destruct (Under 
+5's / Skint sub-label) OUT NOW!</p>
+
+<p>Eddy Temple Morris has already picked up on 
+this little number and played U.F.O, the third 
+track on the EP in his latest radio show on 
+XFM. It's also being featured on Dubline DJ's 
+YouTube channel which is a quality start for 
+Under 5's most recent release.</p>
+
+<p>A FREE bonus track has also been included 
+on the release so get on it and check this 
+heavy package out</p>

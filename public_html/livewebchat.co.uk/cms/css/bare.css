@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document for Phantom Media */
+
+@import url('reset.css');
+
+body { background-color: #F2F2F2; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: #87888A; line-height: 1.5em }
+a { text-decoration: none; color: #5796C7 }
+strong { font-weight: bold }
+h2 { font-size: 22px; margin-bottom: 15px; font-weight: normal; line-height: 25px ; color: #FFF }
+
+#header { width: 910px; display: block; margin: 10px auto }
+	h1 { width: 73px; height: 73px; background: url('../images/logo.png'); text-indent: 73px; line-height: 73px; overflow: hidden }
+		h1 a { display: block }
+	
+#mainNav { width: 910px; margin: 0 auto; height: 39px; background: url('../images/navbar-foot.png') repeat-x bottom }
+	#mainNav li { float: left; margin-right: 5px }
+	#mainNav li.right { float: right; margin-right: 0 }
+		#mainNav a { height: 30px; text-indent: 200px; overflow: hidden; line-height: 30px; display: block; background: url('../images/menu-sprite.png') }
+		#mainNav a:hover { background-image: url('../images/menu-sprite-hover.png') }
+		#mainNav a.on { background-image: url('../images/menu-sprite-on.png') }
+		#mainNav a#home { width: 81px; background-position: -1px 0 }
+		#mainNav a#about { width: 82px; background-position: -82px 0 }
+		#mainNav a#what-we-do { width: 103px; background-position: -164px 0 }
+		#mainNav a#news { width: 56px; background-position: -267px 0 }
+		#mainNav a#bluebox { width: 99px; background-position: -324px 0 }
+		#mainNav a#contact { width: 93px; background-position: -423px 0 }
+		#mainNav a#login { width: 81px; background-position: -516px 0 }
+
+#content { width: 850px; margin: 0 auto; background: #FFF; padding: 25px 30px }
+
+	#splash { height: 415px; position: relative }
+		#splash img { display: block }
+		#splash .information { position: absolute; bottom: 15px; left: 30px; width: 360px }
+	
+	#services { margin: 25px 0 0; color: #5796C7; width: 100%; padding-bottom: 25px; overflow: hidden; border-bottom: 1px solid #78766a }
+		#services p { width: 440px; margin-bottom: 5px; font-size: 14px; line-height: 1.5em }
+		#services img { float: right; width: 216px; height: 120px }
+		#services a { display: block; width: 176px; height: 33px; line-height: 33px; text-indent: 176px; overflow: hidden; background: url('../images/view-our-services.png'); margin-top: 15px }
+	
+	#furtherInfo { width: 100%; padding-top: 5px }
+		#furtherInfo p { margin: 15px 0 0; width: 630px; color: #78766A }
+		#furtherInfo img { clear: right; float: right; margin: 0 20px; padding: 20px 0 10px }
+		#furtherInfo img:last-child { padding-top: 0px }
+		#furtherInfo a:hover { border-bottom: 1px solid #5796C7 }
+	
+#footer { width: 830px; margin: 0 auto; color: #FFF; font: normal 12px/25px 'Myriad Pro',Arial; padding: 0 10px; border: solid #FFF; border-width: 0 30px 25px; background: url('../images/footer-gradient.png'); height: 25px }
+	#footer a { color: #FFF }
+	#footer a:hover { color: #CCC }
+	#copyright { float: left }
+	#footerNav { float: right }
+		#footerNav li { margin-left: 3px; color: #CCC; float: left }

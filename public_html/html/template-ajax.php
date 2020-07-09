@@ -1,0 +1,1 @@
+<?php $this->renderComponent('main'); ?>

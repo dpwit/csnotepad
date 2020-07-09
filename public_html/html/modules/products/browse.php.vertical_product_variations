@@ -1,0 +1,135 @@
+<!--<h2>Our Services, Virtual Reception Services</h2><p><br>
+We've done our best to be as clear and upfront with our pricing as  possible. We know it's frustrating when you want a basic price, but all  you can find is<strong> 'Call us for a quote.'</strong> However if you do have a special  requirement, we'll be pleased to go through it with you. Where services  are more individual in their nature, we've provided an example based on  our highest cost, not our lowest.<strong> Select a service below for more details or to sign up online now.</strong><br><br>
+</p>-->
+
+<?php
+	$index = 0;
+	$skipped_first =false;
+	$basket = Model::loadModel('Basket')->getFirst();
+	$catName = $category? $category->name : $model->name;
+?>
+<?php if($this->model->alternativeHeading) { ?>
+		<h2><?=$this->model->alternativeHeading?> Costs</h2>
+	<?php } else { ?>
+		<h2><?=$this->model->name?> Costs</h2>
+	<?php } ?>
+<table class="ProductTable">
+<thead><tr><th></th> <!-- TOP LEFT BLANK CELL -->
+<?php  
+	$productType = null;
+	$productProperties = array();
+	$productAttributes = array();
+	while ($prod = $this->getItem()) {
+		if(!$productType && $productType = $prod->product_type()){
+		
+			foreach($productType->product_properties() as $property)
+				$productProperties[$property->property_name] = array();
+				
+			if(!$prod->variations())
+				foreach($prod->product_attribute_options() as $attribute_option)
+					$productAttributes[$attribute_option->name] = array();
+			else 
+				foreach($productType->product_attributes() as $attribute)
+					foreach($attribute->options() as $attribute_option)
+						$productAttributes[$attribute_option->name] = array();
+		}
+	
+		foreach($prod->product_property_values as $product_property_value)
+			$productProperties[$product_property_value->product_property()->property_name][] = $product_property_value->property_value;
+		
+		if(!$prod->variations())
+			foreach($prod->product_attribute_options() as $attribute_option)
+				$productAttributes[$attribute_option->name][] = $prod;
+		else 
+			foreach($prod->variations() as $vari)
+				foreach($vari->product_attribute_options() as $attribute_option)
+					$productAttributes[$attribute_option->name][] = $vari;
+		
+		?><th class="ProductName" scope="col"><?=$prod->name?></th><?php 
+		
+	}
+	?></tr></thead><?php
+	foreach($productProperties as $key=>$row)
+	{
+		?><tr><?php
+			?><th scope="row" class="PropertyHeader"><?=$key?></th><?php
+			foreach($row as $cell)
+			{ ?><td><?=$cell?></td><?php }
+		?></tr><?php
+	}
+	foreach($productAttributes as $key=>$row)
+	{
+		if(!count($row)) continue;
+		?><tr><?php
+			?><th scope="row" class="VariationHeader"><?=$key?></th><?php
+	
+			foreach($row as $cell)
+			{ ?><td>&pound;<?=$cell->getDisplayPrice()?><br /><a href="<?=$cell->form_name ? $cell->getURL() : $cell->getPurchaseUrl()?>" class="BuyLink">BUY</a></td><?php }
+		?></tr><?php
+	}
+?>
+</table>
+
+<div class="productContent">
+<?php if($this->model->alternativeHeading) { ?>
+	<h2><?=$this->model->alternativeHeading?></h2>
+<?php } else { ?>
+	<h2><?=$this->model->name?></h2>
+<?php } ?>
+<?=$this->model->content?>
+</div>
+
+<?php if (!@$row_end) {?>
+<?php  } ?>
+    <?
+    $next = $this->getNextLink();
+    $prev = $this->getPrevLink();
+    
+    if ($next || $prev) {
+        
+        ?>
+    <div class='pagination'>
+				<div class='nextlink'>
+
+<?php 
+    
+             if ($next) { ?>
+        <a href="<?=$next?>" class="NextPage">NEXT PAGE</a>
+                <? } ?>
+    </div>
+    <div class='previouslink'>
+	
+            <? if ($prev) { ?>
+		<a href="<?=$prev?>" class="PreviousPage">PREVIOUS PAGE</a>
+        
+                <? } ?>
+                </div>
+
+                
+                <?php
+    //$pages = ($this->getNumPages() > 12)? 12 : $this->getNumPages();
+    $pages = $this->getNumPages();
+	$current = $this->getCurrentPage();
+	$current = $current? $current+1 : 1;
+	?>
+				Page <?=$current?> of <?=$pages?>
+	<?php
+	/*
+		for($a=0; $a<$pages ; $a++){
+			$vis = $a+1;
+			$selected = ($a==$current) ? "selected" : "not-selected";
+?>
+			<a href='<?=$this->getPageLink($a)?>' class='<?=$selected?>'><?=$vis?></a>
+<?
+		}
+		if ($this->getNumPages() > 12) {
+			?>
+			.. <a href='<?=$this->getPageLink($this->getNumPages())?>' class='<?=$selected?>'><?=$this->getNumPages()?></a>
+			<?php
+		}*/
+?>
+
+        <?
+        
+    }
+    ?>

@@ -1,0 +1,39 @@
+
+.form_row.variations {
+	width: 100%;
+}
+.ajaxmanyinput .many-container h2 {
+	display: none;
+}
+table.compact-form {
+	width: 100%;
+}
+td.remove a{
+	display: block;
+	background-image: url(/cms/images/icons/delete_icon.png);
+	background-repeat: no-repeat;
+	font-size: 0px;
+	height: 28px;
+	width: 28px;
+	position: absolute;
+	top:3px;
+	right: 20px;
+}
+th.remove {
+	display:none;
+}
+
+.variationimage .reveal {
+	position: relative;
+}
+.variationimage .reveal-hidden {
+	display: none;
+}
+.variationimage img {
+	float: right;
+/*	position: absolute;
+	right: 20px;
+	top:20px;*/
+}
+.variationimage .delete-link {
+}

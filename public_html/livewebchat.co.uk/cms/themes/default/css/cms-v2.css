@@ -1,0 +1,905 @@
+/*
+ * Uses equal column approach as detailed here:
+ * http://buildinternet.com/2009/07/four-methods-to-create-equal-height-columns/
+ *
+ */
+/* ########## BASIC ELEMENTS ########### */
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #E1E1DB;
+    background-image: url(../img/bg-silvergrad.png);
+    background-repeat: repeat-x;
+    font-family: Arial, sans-serif;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+h1 {
+    font-weight: bold;
+    color: #000000;
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+
+h2, .formHeader {
+    color: #000000;
+    font-size: 15px;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h4 {
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+}
+
+p {
+    color: #000000;
+    font-size: 12px;
+    color: #000000;
+    font-size: 10px;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+
+a {
+    color: #0088CE;
+}
+
+a:hover {
+    color: #12AFFF;
+}
+
+#headeruserstatus a, #headerlogo {
+    color: #fff;
+}
+
+/* ########## GENERAL LAYOUT ########### */
+#pixelwidth {
+    width: 960px;
+    margin: 10px auto;
+    background-color: white;
+    text-align: left;
+}
+
+#leftEqCol, #mainEqCol {
+    float: left;
+    position: relative;
+}
+
+#leftEqCol {
+    right: 800px;
+    background: #505050;
+}
+
+#mainEqCol {
+    right: 0px;
+    overflow: hidden;
+}
+
+#mainCol {
+	padding: 10px;
+    width: 780px;
+    float: left;
+    background: white;
+    left: 800px;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+    padding-bottom: 30px;
+}
+
+#header {
+    padding: 10px;
+    background: url(/cms/images/bg-black_grad.jpg) repeat-x;
+    height: 32px;
+}
+
+#headerlogo {
+    float: left;
+    font-size: 28px;
+    padding: 7px 5px 0;
+}
+
+#headeruserstatus {
+    float: right;
+    padding: 5px;
+}
+
+.listing-search-header {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.facetted-search, .listing-search-box {
+	clear: both;
+    float: right;
+}
+
+.listing-search-box {
+    float: right;
+}
+
+.listing-breadcrumb {
+    padding: 5px 10px;
+    float: left;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #ccc;
+}
+
+#listing-csv {
+    background-color: #ddd;
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+#listing-csv a {
+    padding: 0 10px;
+}
+
+.cms-header, .cms-sub-links, .listing-links {
+    margin: 20px 20px 10px;
+    clear: both;
+    float: left;
+}
+
+.model-row-categorymodel td:first-child {
+    background: url("/cms/images/icons/circular/folder.png") no-repeat scroll 5px center;
+}
+
+.model-row-mp3bundlemodel td:first-child {
+    background: url("/cms/images/icons/circular/music.png") no-repeat scroll 5px center;
+}
+
+.config-section {
+    margin: 20px;
+}
+
+/* ########## VERTICAL MENU ########### */
+#navigation {
+    display: block;
+    width: 150px;
+    clear: both;
+    float: left;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+    position: relative;
+    left: 800px;
+}
+
+#navigation > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#navigation ul li {
+    float: none;
+    display: block;
+}
+
+#navigation ul li a {
+    width: 137px;
+    height: 31px;
+    display: block;
+    font-weight: bold;
+    background: #333;
+    color: #ddd;
+    line-height: 31px;
+    text-decoration: none;
+    cursor: hand;
+    cursor: pointer;
+    padding: 0 0 0 10px;
+	-moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+	border-bottom: 1px solid #505050;
+	border-right: 3px solid #505050;
+}
+
+#navigation ul li a:hover {
+	background: #000 url('/images/blacksilkgrad.png') repeat-x top left;
+    width: 140px;
+	border-right: 0;
+	}
+
+/*
+#navigation ul li a span {
+	float: right;
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 10px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+	border-bottom: none;
+	position: relative;
+	top: 11px;
+	right: 10px;
+}
+*/
+#navigation ul.cms-section-menu {
+	padding: 0;
+}
+
+#navigation ul.cms-section-menu li a {
+    background-image: none;
+	border-top-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    height: 31px;
+    display: block;
+	background-color: #777;
+	border-bottom: 1px solid #505050;
+	border-right: 0;
+	width: 140px;
+}
+
+#navigation ul.cms-section-menu li a:hover {
+    background-color: #666;
+}
+
+#navigation ul.cms-section-menu li a span {
+	float: right;
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #777 ;
+    border-bottom: 5px solid transparent;
+	border-right: none;
+	position: relative;
+	top: 11px;
+	right: 10px;
+}
+
+
+/* ########## NAV SELECTED ########### */
+
+
+#navigation ul li a.selected {
+	background: #000 url('/images/blacksilkgrad.png') repeat-x top left;
+    width: 140px;
+	border-right: 0;
+	}
+
+#navigation ul.cms-navigation .selected > a {
+	background: #000 url('/images/blacksilkgrad.png') repeat-x top left;	
+	width: 140px;
+	border-right: 0;
+}
+
+/*
+#navigation ul.cms-section-menu .selected {
+    background: #1a1a1a !important;
+    color: white !important;
+    width: 130px;
+}
+*/
+.not-selected .accordion-content {
+    display: none;
+}
+
+
+
+#navigation ul li .selected span {
+    border-top: 5px solid transparent;
+    border-right: 10px solid white;
+    border-bottom: 5px solid transparent;
+	border-left: none;
+	float: right;
+    font-size: 0px;
+    line-height: 0%;
+    width: 0px;
+	position: relative;
+	top: 11px;
+	right: 0px;
+}
+
+
+
+
+/* ########## Sub navigation ########### */
+#subnav {
+    padding: 0px;
+    margin: 0 0 20px 0;
+    float: left;
+    width: 100%;
+    width: 700px;
+}
+
+#subnav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#subnav ul li {
+    display: inline;
+}
+
+#subnav ul li a {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 5px;
+    color: #333;
+    background: #999 url(/cms/images/bg-black_grad.jpg) repeat-x;
+    width: auto;
+    height: 31px;
+    line-height: 31px;
+    cursor: hand;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#subnav ul li a:hover {
+    background: #555;
+    color: #222;
+}
+
+/* ########## Sub navigation 2 ########### */
+#subnav2 {
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 700px;
+}
+
+#subnav2 ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+#subnav2 ul li {
+    display: inline;
+    margin: 1px;
+}
+
+#subnav2 a {
+    padding: 3px 7px 4px 7px;
+    float: left;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: #666;
+    color: #000;
+}
+
+
+/* ########## CLICKY THINGS ########### */
+.buttonblock, input[type =
+'submit'] {
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 0 5px 5px;
+    color: #ddd;
+    background: #999 url(/cms/images/bg-black_grad.jpg) repeat-x;
+    width: auto;
+    height: 26px;
+    line-height: 26px;
+    cursor: hand;
+    cursor: pointer;
+	font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.submitButton {
+	margin-top: 20px
+}
+
+.buttonblock:hover, input[type =
+'submit']:hover {
+    color: #fff;
+	padding: 0px 3px;
+	border: 2px solid #666;
+}
+
+.listing-search-box input[type =
+'submit'] {
+	font-size: 9px;
+
+	height: 18px;
+	line-height: 18px;
+}
+
+.filter {
+    -moz-border-radius-topleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 5px;
+    background: #bbb;
+}
+
+.filter h4 {
+    text-align: center;
+    padding: 5px 10px;
+	margin: 0;
+	font-weight: bold;
+	font-size: 13px;
+	color: #333;
+}
+
+.filter-list {
+    background: #ccc;
+    padding: 10px;
+    text-align: left;
+    list-style-position: inside;
+    list-style-type: square;
+    margin: 0;
+}
+
+/* ########## FORMS ########### */
+.form_main, .listing-salesreport {
+    margin: 20px;
+}
+
+.form_label {
+    /*    width: 80%; */
+    color: #444;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.form_row {
+    float: left;
+    width: 47%;
+    margin: 0 10px 10px 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px;
+    background: #ddd;
+}
+
+.form_row_footer {
+    clear: left;
+}
+
+.form_colleft, .form_colright {
+    width: 50%;
+    float: left;
+}
+
+.form_input {
+    min-height: 26px;
+}
+
+input, select, textarea, .mm-selector-list {
+	background: #efefef;
+	border: 0;
+/*	border-top: solid gray 1px;
+	border-left: solid gray 1px;*/
+	padding: 0 5px;
+}
+
+.form_input input[type =
+'text'], input[type = 'password'], .form_input select {
+    width: 97.5%;
+    height: 26px;
+}
+
+.form_input select {
+    padding: 4px;
+    height: 26px;
+    width: 99.5%;
+}
+
+.form_input textarea {
+    width: 97.5%;
+    height: 82px;
+}
+
+.form_input .file-types {
+    margin: 0 0 10px 0;
+}
+
+.form_notes {
+    clear: both;
+}
+
+.formSection {
+    clear: both;
+}
+
+.reveal {
+    background: #eee;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+.reveal input[type =
+'file'] {
+    margin: 0 0 10px 0;
+}
+
+.reveal img {
+    margin: 0 0 10px 0;
+}
+
+/* ###### FORM OVERRIDES ####### */
+.fckeditorfield, .stockbyattributefield {
+    clear: both;
+    width: 96.5%;
+    margin: 0 0 10px 0 !important;
+}
+.fckeditorfield {
+    text-align: center;
+}
+
+.imagepreviewfileinput {
+    width: 47%;
+    text-align: center;
+}
+
+.fckeditorfield .form_label, .imagepreviewfileinput .form_label {
+    text-align: left;
+}
+
+/* ########## MM ########### */
+.mm-selector-wrapper {
+    background: #ddd;
+    padding: 5px;
+}
+
+.productselector, .mmsortedselector {
+    width: 47%;
+}
+
+.mm-selector-list {
+    /* this is a table */
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+.mm-selector-list table {
+    width: 100%;
+}
+
+.mm-selector-list td {
+    padding: 5px;
+}
+
+/* ########## Forms in Tables ########### */
+table input {
+    width: 200px;
+}
+
+table .tbl-select-item {
+    width: 100%;
+}
+
+/* ########## Tables ########### */
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+thead, .tableHead {
+    font-size: 14px;
+    color: #666;
+    font-family: Lucida Sans Unicode, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid #ccc;
+    border-left: 2px solid white;
+}
+
+tfoot {
+    background-color: #ccc;
+}
+
+.tablecell {
+    color: #000000;;
+    padding: 5px;
+    background: transparent;
+    text-align: center;
+    border-left: 2px solid white;
+}
+
+.actionCell {
+    width: 200px;
+}
+
+.tablecellLeft {
+    color: #000000;;
+    font-size: 12px;
+    text-align: center;
+    border-left: none;
+}
+.tablecellLeft input {
+	width: auto;
+}
+
+.actionCell {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cmstable {
+    color: #0A195E;;
+    font-family: arial;
+    font-size: 12px;
+    /*    width: 780px; */
+    width: 97%;
+    clear: both;
+    margin: 10px 10px 20px 10px;
+}
+
+.cmstable .odd {
+}
+
+.cmstable .even {
+    background-color: #eee;
+}
+
+.cms-sub-links a {
+    display: block;
+    padding: 5px;
+    font-size: 0.8em;
+    float: left;
+}
+
+.cms-pagination {
+    float: right;
+}
+
+.order-summary {
+	margin: 10px 10px 20px;
+	border-spacing: 5px;
+	border-collapse: separate;
+}
+.order-summary tr {
+	font-weight: bold;
+}
+
+.order-summary tr + tr {
+	font-weight: normal;
+}
+
+/* ########## MODAL ########## */
+#basic-modal-content {
+    display: none;
+}
+
+#simplemodal-overlay {
+    background-color: #000;
+    cursor: wait;
+}
+
+#simplemodal-container {
+    height: 450px;
+    width: 1000px; /*color:#bbb;*/
+    background-color: #fff;
+    border: 4px solid #444;
+}
+
+#simplemodal-container code {
+    background: #ffffff;
+    border-left: 3px solid #65B43D;
+    color: #bbb;
+    display: block;
+    margin-bottom: 12px;
+    padding: 4px 6px 6px;
+}
+
+/* #simplemodal-container a {color:#ddd;} */
+#simplemodal-container a.modalCloseImg {
+    background: url(../img/x.png) no-repeat;
+    width: 25px;
+    height: 29px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: -15px;
+    right: -16px;
+    cursor: pointer;
+}
+
+#simplemodal-container #basic-modal-content {
+    padding: 8px;
+}
+
+#simplemodal-data {
+    overflow: auto;
+}
+
+/* ########## CLEARFIX ########## */
+/*
+http://perishablepress.com/press/2009/12/06/new-clearfix-hack/
+ */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "\0020";
+    clear: both;
+    height: 0;
+}
+* html .clearfix {
+/* IE6 */ 
+    zoom: 1;
+}
+
+*:first-child + html .clearfix {
+/* IE7 */
+    zoom: 1;
+}
+
+.cms-left {
+	float: left;
+}
+.cms-right {
+	float: right;
+	border-left: solid gray 1px;
+}
+
+.cms-wide {
+	width: 65%;
+}
+.cms-thin {
+	width: 34%;
+	background: #ccc;
+}
+.cms-thin .form_row {
+	width: 86%;
+}
+.cms-wide .form_row {
+	width: 45%;
+}
+.previous-notes {
+	margin: 20px;
+}
+.cms-thin .form_label {
+	float: left;
+}
+.cms-thin .form_input {
+	float: right;
+}
+div.clear {
+	clear: both;
+}
+
+.form_notes .idfield ,
+.form_notes .constantfield {
+	display: none;
+}
+
+.note {
+	padding: 3px;
+	margin-bottom: 5px;
+}
+.note-public {
+	border: solid black 1px;
+	background: white;
+}
+.listing-title {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 20px;
+}
+.form_input input.qty-field {
+	width: 60px;
+}
+span.qty {
+	float: right;
+}
+.product-attribute li {
+	clear: both;
+}
+
+.many-sub-form, .many-record {
+	clear: left;
+}
+.many-record {
+	border: solid #ccc 1px;
+	padding: 10px;
+	padding-right: 18px;
+	margin-top: 10px;
+	padding-top: 2px;
+}
+.sortable .many-record-html-control {
+	background: #aaa;
+}
+div.sortable-handle {
+	float: right;
+}
+a.sortable-handle {
+	display:block;
+}
+.sortable-handle {
+	width: 22px;
+	height: 22px;
+	background-image: url(/cms/images/icons/move.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.sortable-handle span {
+	display: none;
+}
+
+.many-sub-form .form_row{
+	background: #ccc;
+	width: 100%;
+}
+
+.many-footer {
+	clear: left;
+}
+.form_error {
+	color: red;
+	font-weight: bold;
+}
+div.product-attribute {
+	width: 47%;
+	float: left;
+	margin-bottom: 15px;
+}
+.delete-link {
+margin-top: 5px;
+text-align: right;
+}
+.datetimepicker .date-selector ,
+.datetimepicker .time-selector 
+{
+	float: left;
+}
+.datetimepicker .date-selector {
+	width: 60%;
+}
+.datetimepicker .time-selector {
+	width: 35%;
+}
+.datetimepicker .time-selector select {
+	width: 40%;
+}
+.report-title-row {
+	text-align: left;
+	font-size: 0.8em;
+}
+.col-quantity, .col-total {
+	width: 100px;
+}
+tr.daily-summary {
+	border-top: solid #ccc 1px;
+	font-weight: bold;
+}
+.daily-total {
+}
+.many-record {
+	position: relative;
+}
+.many-record .sortable-handle {
+	position: absolute;
+	top:10px;
+	right: 10px;
+}

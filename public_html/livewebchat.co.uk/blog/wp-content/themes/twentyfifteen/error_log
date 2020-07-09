@@ -1,0 +1,4 @@
+[04-Mar-2017 01:58:12 UTC] PHP Fatal error:  Call to undefined function get_header() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/themes/twentyfifteen/404.php on line 10
+[04-Mar-2017 07:12:06 UTC] PHP Fatal error:  Call to undefined function get_template_directory() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/themes/twentyfifteen/functions.php on line 41
+[24-Oct-2017 17:32:26 Europe/London] PHP Fatal error:  Call to undefined function get_header() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/themes/twentyfifteen/404.php on line 10
+[01-Feb-2018 18:02:47 Europe/London] PHP Fatal error:  Call to undefined function get_template_directory() in /data/call02/public_html/livewebchat.co.uk/blog/wp-content/themes/twentyfifteen/functions.php on line 41

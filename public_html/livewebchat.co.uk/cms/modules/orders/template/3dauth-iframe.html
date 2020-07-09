@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script type='text/javascript' src='/js/jquery.js'></script>
+		<script>
+			pullFromParent = function(){
+				$('#MD').val(top.MD);
+				$('#PAReq').val(top.PAReq);
+				$('#TermURL').val(top.TermURL);
+				$('#act').val(top.ACSURL);
+				$('#form').attr('action',top.ACSURL);
+				$('#form').submit();
+			}
+		</script>
+	</head>
+	<body onLoad='pullFromParent()'>
+<form method='post' id='form'>
+	<input type='hidden' id='act' name='act'/>
+	<input type='hidden' id='MD' name='MD'/>
+	<input type='hidden' id='TermURL' name='TermUrl'/>
+	<input type='hidden' id='PAReq' name='PaReq'/>
+</form>
+</body></html>

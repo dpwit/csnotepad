@@ -1,0 +1,25 @@
+<html>
+<head>
+<script language="javascript">
+function displayCondition() {
+    condition = new Array("", "Perfect", "Excellent", "Good", "Poor", "Broken");
+    var getsel = document.getElementById('select_1').value;
+    document.getElementById("divId").innerHTML = condition[getsel];
+}
+</script>
+</head>
+<body>
+<form name="formName">
+    <select name="options[1][]" id="select_1" class="multiselect required-entry product-custom-option" title=""  onchange="displayCondition()">
+        <option value="0">Select Condition</option>
+        <option value="1"  price="0" >Perfect</option>
+        <option value="2"  price="-35" >Excellent</option>
+        <option value="3"  price="-105" >Good</option>
+        <option value="4"  price="-140" >Poor</option>
+        <option value="5"  price="-252" >Broken</option>
+    </select>
+    <div id="divId" name="divName" ></div>
+</form>
+
+</body>
+</html>

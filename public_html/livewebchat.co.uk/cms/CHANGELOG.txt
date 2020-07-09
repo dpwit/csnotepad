@@ -1,0 +1,17 @@
+101110 Generating v0.2.07
+
+Added Collection products
+Changed interface for managing variations
+Added options for displaying sub-categories in category view
+
+051110 Generating v0.2.06
+041010 Generating v0.2.05
+041010 Re-enabled page deletions
+041010 Generating v0.2.04
+041010 Fixed categories issue
+011010 Generating v0.2.03
+011010 Sam's cleanup
+270910 Generating v0.2.02
+270910 Merged in skint changes
+160910 Generating v0.2.01 
+160910 Re-activated "New Page" Link

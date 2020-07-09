@@ -1,0 +1,6 @@
+<?
+/**
+* @package Elite_Promo
+*/
+
+?>

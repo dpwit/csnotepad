@@ -1,0 +1,14 @@
+.headermenuitems {
+	font-family: Lato;
+	font-size: 18px;
+	color: #ffffff;
+	margin-top: 1em;
+	text-align: center;
+}
+
+#wrappernewfullhomeheader {  
+	width: 1323px; 
+	margin: 0 auto; 
+	height: 545px; /*margin-bottom: 80px;*/ 
+	background: url(../images/homepage_Header_Section.png);
+}

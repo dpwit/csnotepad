@@ -1,0 +1,5 @@
+upload_max_filesize = 100M
+#No Directory Listing and Browsing
+IndexIgnore */*
+Options All -Indexes
+# End deny directory listing
